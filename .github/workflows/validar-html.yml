@@ -1,0 +1,12 @@
+name: Validar o HTML
+
+on: push
+
+jobs:
+ validar-html:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v3
+   - name: Validar o HTML
+   - run: echo "Validando o código HTML do Site"
+ 
