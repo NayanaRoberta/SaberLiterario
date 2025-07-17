@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Livros</title>
+    <link rel="stylesheet" type="text/css" href="css/catalogo-style.css" media="screen" />
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="photos/[Logo] Saber Literário 2.png" alt="logo"></div>
+        <div class="menu">
+           <nav>
+                <ul>
+                    <li><img src="photos/UserCircle.svg" alt="UserCircle"></li>
+                    <li><a href='home.html'>Home</a></li>
+                    <li><a href='#'>Clientes</a></li>
+                    <li><a href='#'>Empréstimos</a></li>
+                </ul>
+            </nav>
+            <div class="buscaSite">
+                    <input type="text" placeholder="Encontre no site">
+                    <button type="submit"><img src="./photos/ic-search.svg" alt="Pesquisar"></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <div class="ordenacao">
+              <h3>Ordenar por</h3>
+                <select id="ordenacao">
+                    <option value="asc">Ordem Alfabética (A-Z)</option>
+                    <option value="desc">Ordem Alfabética (Z-A)</option>
+                </select>
+            </div>
+            <div class="filtros">
+                <h3>Filtros</h3>
+                <select id="categoria">
+                    <option value="">Categoria:</option>
+                    <option value="ficcao">Ficção</option>
+                    <option value="romance">Romance</option>
+                    <option value="terror">Terror</option>
+                </select>
+                <select id="subcategoria">
+                    <option value="">Subcategoria:</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="drama">Drama</option>
+                    <option value="suspense">Suspense</option>
+                </select>
+                <select id="autor">
+                    <option value="">Autor:</option>
+                    <option value="autor1">Autor 1</option>
+                    <option value="autor2">Autor 2</option>
+                    <option value="autor3">Autor 3</option>
+                </select>
+                <select id="idioma">
+                    <option value="">Idioma:</option>
+                    <option value="portugues">Português</option>
+                    <option value="ingles">Inglês</option>
+                    <option value="espanhol">Espanhol</option>
+                </select>
+                <select id="editora">
+                    <option value="">Editora:</option>
+                    <option value="editora1">Editora 1</option>
+                    <option value="editora2">Editora 2</option>
+                    <option value="editora3">Editora 3</option>
+                </select>
+                <button id="limparFiltros">Limpar Filtros</button>
+            </div>
+            <h3>Cadastrar Novo Livro</h3>
+	    <a href="index.html" class="botao">Cadastrar</a>
+        </aside>
+
+        <section class="catalogo">
+            <section class="topo">
+                <a>Catálogo</a>
+		<div class="buscaCatalogo">
+                	<input class="inputCatalogo" type="text" placeholder="Informe título, ano, autor ou editora para a pesquisa.">
+                	<button type="submit"><img src="./photos/ic-search.svg" alt="Pesquisar"></button>
+                </div>
+	    </section>
+            <div class="livros">
+                <div class="livro">
+                    <img src="photos/Diario de um Vampiro.png" alt="Capa do Diários do Vampiro: O Despertar">
+                    <h4>Diários do Vampiro: O Despertar</h4>
+                    <button type="submit"><img src="./photos/Vector.jpg">Informações</button>
+                </div>
+                <div class="livro">
+                    <img src="photos/Jogos Vorazes.png" alt="Capa do Livro: Jogos Vorazes">
+                    <h4>Jogos Vorazes</h4>
+                    <button type="submit"><img src="./photos/Vector.jpg">Informações</button>
+                </div>
+                <div class="livro">
+                    <img src="photos/A Paciente Silenciosa.png" alt="Capa do livro: A Paciente Silenciosa">
+                    <h4>A Paciente Silenciosa</h4>
+                    <button type="submit"><img src="./photos/Vector.jpg">Informações</button>
+                </div>
+                <div class="livro">
+                    <img src="photos/O Alquimista.png" alt="Capa do Livro: O Alquimista">
+                    <h4>O Alquimista</h4>
+                    <button type="submit"><img src="./photos/Vector.jpg">Informações</button>
+                </div>
+                <div class="livro">
+                    <img src="photos/O Pequeno Principe.png" alt="Capa do Livro: O Pequeno Príncipe (Original)">
+                    <h4>O Pequeno Príncipe (Original)</h4>
+                    <button type="submit"><img src="./photos/Vector.jpg">Informações</button>
+                </div>
+                <div class="livro">
+                    <img src="photos/Biblia Sagrada.png" alt="Capa do Livro: Bíblia Sagrada">
+                    <h4>Bíblia Sagrada</h4>
+                    <button type="submit"><img src="./photos/Vector.jpg">Informações</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script/catalogo-script.js"></script>
+</body>
+</html>
