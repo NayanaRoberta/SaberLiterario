@@ -1,4 +1,4 @@
-name: CI de Acessibilidade com Pa11y
+name: CI de Acessibilidade
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
       run: npm install -g pa11y # Instala o Pa11y globalmente
 
     - name: Servir arquivos HTML localmente
-      run: | # <--- 'run:' alinhado com 'name:'
+      run: |
         npm install -g http-server
         http-server . & # Inicia um servidor na porta 8080 em background
         sleep 5 # Dá um tempo para o servidor iniciar
@@ -33,6 +33,7 @@ jobs:
     - name: Executar Testes de Acessibilidade com Pa11y
       run: |
         echo "Iniciando testes de acessibilidade em arquivos HTML locais..."
+        # ESTA É A LINHA CRÍTICA PARA VERIFICAR:
         pa11y http://localhost:8080/index.html --standard WCAG2AA --puppeteer-launch-args="--no-sandbox"
         pa11y http://localhost:8080/saber-literário/cadastrar-livro.html --standard WCAG2AA --puppeteer-launch-args="--no-sandbox"
         pa11y http://localhost:8080/saber-literário/catalogo.html --standard WCAG2AA --puppeteer-launch-args="--no-sandbox"
