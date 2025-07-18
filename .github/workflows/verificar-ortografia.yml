@@ -18,4 +18,4 @@ jobs:
         run: npm install -g cspell
 
       - name: Verificar erros de ortografia no HTML
-        run: cspell "**/*.html"
+        run: cspell "**/*.html" --config cspell.json
