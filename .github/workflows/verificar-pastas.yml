@@ -1,0 +1,47 @@
+name: CI de Verificação de Pastas
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-directories:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
+    - name: Verificar existência das pastas essenciais
+      run: |
+        echo "Iniciando verificação de pastas..."
+
+        # Lista de pastas que DEVEM EXISTIR (adicione as suas aqui)
+        REQUIRED_DIRECTORIES=(
+          "saber-literário/css"
+          "saber-literário/photos"
+          "saber-literário/script"
+          ".github/workflows"
+        )
+
+        ALL_FOUND=true
+
+        for dir in "${REQUIRED_DIRECTORIES[@]}"; do
+          if [ ! -d "$dir" ]; then
+            echo "::error file=$dir::Pasta necessária NÃO encontrada: $dir"
+            ALL_FOUND=false
+          else
+            echo "Pasta encontrada: $dir"
+          fi
+        done
+
+        if [ "$ALL_FOUND" = false ]; then
+          echo "::error::Algumas pastas essenciais estão faltando. Verifique os logs acima."
+          exit 1 # Falha o job se alguma pasta não for encontrada
+        else
+          echo "Todas as pastas essenciais foram encontradas. Sucesso!"
+        fi
