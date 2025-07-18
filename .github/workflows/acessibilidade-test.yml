@@ -10,11 +10,11 @@ on:
 
 jobs:
   accessibility-test:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout do código
-      uses: actions/checkout@v4 
+      uses: actions/checkout@v4
 
     - name: Configurar Node.js
       uses: actions/setup-node@v4
@@ -25,16 +25,16 @@ jobs:
       run: npm install -g pa11y # Instala o Pa11y globalmente
 
     - name: Servir arquivos HTML localmente
-       run: |
-         npm install -g http-server
-         http-server . & # Inicia um servidor na porta 8080 em background
-         sleep 5 # Dá um tempo para o servidor iniciar
-    
-     - name: Executar Testes de Acessibilidade com Pa11y
-       run: |
-         echo "Iniciando testes de acessibilidade em arquivos HTML locais..."
-         pa11y http://localhost:8080/index.html --standard WCAG2AA
-         pa11y http://localhost:8080/saber-literário/cadastrar-livro.html --standard WCAG2AA
-         pa11y http://localhost:8080/saber-literário/catalogo.html --standard WCAG2AA
-         pa11y http://localhost:8080/saber-literário/home.html --standard WCAG2AA
-         pa11y http://localhost:8080/saber-literário/login.html --standard WCAG2AA
+      run: | # <--- 'run:' alinhado com 'name:'
+        npm install -g http-server
+        http-server . & # Inicia um servidor na porta 8080 em background
+        sleep 5 # Dá um tempo para o servidor iniciar
+
+    - name: Executar Testes de Acessibilidade com Pa11y
+      run: | # <--- 'run:' alinhado com 'name:'
+        echo "Iniciando testes de acessibilidade em arquivos HTML locais..."
+        pa11y http://localhost:8080/index.html --standard WCAG2AA
+        pa11y http://localhost:8080/saber-literário/cadastrar-livro.html --standard WCAG2AA
+        pa11y http://localhost:8080/saber-literário/catalogo.html --standard WCAG2AA
+        pa11y http://localhost:8080/saber-literário/home.html --standard WCAG2AA
+        pa11y http://localhost:8080/saber-literário/login.html --standard WCAG2AA
