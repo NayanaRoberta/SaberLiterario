@@ -1,0 +1,13 @@
+name: CI SaberLiterário
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Ambiente de execução do job
+    steps:
+    - uses: actions/checkout@v4 #Clona o repositório
+    - name: Exemplo de Mensagem
+      run: echo "Olá, este é um workflow de checagem de arquivos!"
+    - name: Listar arquivos
+      run: ls -la

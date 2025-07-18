@@ -1,0 +1,29 @@
+name: CI de Validação CSS com Stylelint
+
+on:
+  push:
+    branches:
+      - '*' # Aciona no push para para todas as branches
+  pull_request:
+    branches:
+      - '*' # 
+jobs:
+  lint-css:
+    runs-on: ubuntu-latest # O ambiente de execução para este job
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v4 # Clona o repositório
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Instalar Stylelint e dependências
+      run: |
+        npm install stylelint stylelint-config-standard # Instala o Stylelint e uma configuração padrão
+
+    - name: Executar Validação CSS com Stylelint
+      run: |
+        npx stylelint "saber-literário/css/**/*.css"

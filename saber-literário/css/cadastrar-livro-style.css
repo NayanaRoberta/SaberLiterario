@@ -1,0 +1,175 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+
+.header {
+  background-color: #ffeb3b; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 100px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #ffeb3b;
+  font-weight: bold;
+}
+
+.menu-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.menu-links span {
+  color: #333;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: grid;
+  align-items: normal;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.search-bar button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.book-cover {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.book-cover img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.upload-button {
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-fields {
+  width: 70%;
+}
+
+.form-fields label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-fields input,
+.form-fields textarea,
+.form-fields select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.form-fields textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-button {
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-button {
+  background-color: #ffeb3b;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #fdd835;
+}

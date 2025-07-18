@@ -1,0 +1,12 @@
+name: Checagem de Links
+
+on: push
+
+jobs:
+ checar-links:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Checar os links quebrados
+     uses: lycheeverse/lychee-action@v1.9.0
+     with:
+      args: ./ --verbose --exclude-mail
