@@ -3,20 +3,19 @@ name: De olho nos erros ortográficos
 on: push
 
 jobs:
- verificar-ortografia:
-  runs-on: ubuntu-latest
-  steps:
-   - uses: action/checkout@v3
+  verificar-ortografia:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificação do código
+        uses: actions/checkout@v3
 
-   - name: Instalar o node
-     uses: action/setup-node@v4
-     with:
-      node-version: '18'
+      - name: Instalar o Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
+      - name: Instalar verificação ortográfica
+        run: npm install -g cspell
 
-   - name: Instalar a ferramenta de liguaguem
-     run: npm install -g languagetool-cli
-
-   - name: verificar os erros de ortografia e gramatica
-     run: |
-      languagetool-cli -l pt-BR *.html
+      - name: Verificar erros de ortografia no HTML
+        run: cspell "**/*.html"
