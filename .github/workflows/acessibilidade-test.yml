@@ -31,7 +31,7 @@ jobs:
         sleep 5 # Dá um tempo para o servidor iniciar
 
     - name: Executar Testes de Acessibilidade com Pa11y
-      env: # <--- NOVA SEÇÃO: Definindo variáveis de ambiente para o Puppeteer
+      env: # <--- Definindo variáveis de ambiente para o Puppeteer
         PUPPETEER_LAUNCH_ARGS: "--no-sandbox" # <--- Passa a flag --no-sandbox para o Puppeteer
       run: |
         echo "Iniciando testes de acessibilidade em arquivos HTML locais..."
