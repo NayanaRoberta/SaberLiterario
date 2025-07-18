@@ -26,4 +26,4 @@ jobs:
 
     - name: Executar Validação CSS com Stylelint
       run: |
-        "**/*.css"
+        npx stylelint "saber-literário/css/**/*.css"
