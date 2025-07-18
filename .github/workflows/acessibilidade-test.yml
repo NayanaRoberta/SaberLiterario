@@ -33,8 +33,8 @@ jobs:
     - name: Executar Testes de Acessibilidade com Pa11y
       run: |
         echo "Iniciando testes de acessibilidade em arquivos HTML locais..."
-        pa11y http://localhost:8080/index.html --standard WCAG2AA --no-sandbox
-        pa11y http://localhost:8080/saber-literário/cadastrar-livro.html --standard WCAG2AA --no-sandbox
-        pa11y http://localhost:8080/saber-literário/catalogo.html --standard WCAG2AA --no-sandbox
-        pa11y http://localhost:8080/saber-literário/home.html --standard WCAG2AA --no-sandbox
-        pa11y http://localhost:8080/saber-literário/login.html --standard WCAG2AA --no-sandbox
+        pa11y http://localhost:8080/index.html --standard WCAG2AA --puppeteer-launch-args="--no-sandbox"
+        pa11y http://localhost:8080/saber-literário/cadastrar-livro.html --standard WCAG2AA --puppeteer-launch-args="--no-sandbox"
+        pa11y http://localhost:8080/saber-literário/catalogo.html --standard WCAG2AA --puppeteer-launch-args="--no-sandbox"
+        pa11y http://localhost:8080/saber-literário/home.html --standard WCAG2AA --puppeteer-launch-args="--no-sandbox"
+        pa11y http://localhost:8080/saber-literário/login.html --standard WCAG2AA --puppeteer-launch-args="--no-sandbox"
