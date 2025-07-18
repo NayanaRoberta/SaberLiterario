@@ -3,7 +3,7 @@ name: De olho nos erros ortográficos
 on: push
 
 jobs:
- verificar-ortográfia:
+ verificar-ortografia:
   runs-on: ubuntu-latest
   steps:
    - uses: action/checkout@v3
