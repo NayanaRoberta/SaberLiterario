@@ -1,0 +1,22 @@
+name: De olho nos erros ortográficos
+
+on: push
+
+jobs:
+ verificar-ortográfia:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: action/checkout@v3
+
+   - name: Instalar o node
+     uses: action/setup-node@v4
+     with:
+      node-version: '18'
+
+
+   - name: Instalar a ferramenta de liguaguem
+     run: npm install -g languagetool-cli
+
+   - name: verificar os erros de ortografia e gramatica
+     run: |
+      languagetool-cli -l pt-BR *.html
