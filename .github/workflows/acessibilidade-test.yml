@@ -31,10 +31,9 @@ jobs:
         sleep 5 # Dá um tempo para o servidor iniciar
 
     - name: Executar Testes de Acessibilidade com Pa11y
-      env: # <--- Definindo variáveis de ambiente para o Puppeteer
-        PUPPETEER_LAUNCH_ARGS: "--no-sandbox" # <--- Passa a flag --no-sandbox para o Puppeteer
       run: |
         echo "Iniciando testes de acessibilidade em arquivos HTML locais..."
+        # Pa11y vai carregar as configs do .pa11y.json automaticamente
         pa11y http://localhost:8080/index.html --standard WCAG2AA
         pa11y http://localhost:8080/saber-literário/cadastrar-livro.html --standard WCAG2AA
         pa11y http://localhost:8080/saber-literário/catalogo.html --standard WCAG2AA
