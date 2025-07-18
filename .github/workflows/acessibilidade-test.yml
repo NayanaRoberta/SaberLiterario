@@ -31,10 +31,10 @@ jobs:
         sleep 5 # Dá um tempo para o servidor iniciar
 
     - name: Executar Testes de Acessibilidade com Pa11y
-      run: | # <--- 'run:' alinhado com 'name:'
+      run: |
         echo "Iniciando testes de acessibilidade em arquivos HTML locais..."
-        pa11y http://localhost:8080/index.html --standard WCAG2AA
-        pa11y http://localhost:8080/saber-literário/cadastrar-livro.html --standard WCAG2AA
-        pa11y http://localhost:8080/saber-literário/catalogo.html --standard WCAG2AA
-        pa11y http://localhost:8080/saber-literário/home.html --standard WCAG2AA
-        pa11y http://localhost:8080/saber-literário/login.html --standard WCAG2AA
+        pa11y http://localhost:8080/index.html --standard WCAG2AA --no-sandbox
+        pa11y http://localhost:8080/saber-literário/cadastrar-livro.html --standard WCAG2AA --no-sandbox
+        pa11y http://localhost:8080/saber-literário/catalogo.html --standard WCAG2AA --no-sandbox
+        pa11y http://localhost:8080/saber-literário/home.html --standard WCAG2AA --no-sandbox
+        pa11y http://localhost:8080/saber-literário/login.html --standard WCAG2AA --no-sandbox
