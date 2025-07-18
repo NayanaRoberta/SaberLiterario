@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    // Exemplo de regra personalizada: garante que a indentação seja de 2 espaços
+    "indentation": 2,
+    // Exemplo: força aspas simples para strings
+    "string-quotes": "single",
+    // Exemplo: não permite que blocos fiquem vazios, a não ser que você explicitamente permita
+    "block-no-empty": null
+    // Adicione mais regras aqui conforme as necessidades do seu projeto
+  }
+}
