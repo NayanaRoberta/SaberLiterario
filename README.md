@@ -41,6 +41,26 @@ Estamos trabalhando ativamente para deixar o Saber Literário ainda mais complet
 💬 Mensagens e notificações: enviar lembretes automáticos para devolução de livros atrasados.
 
 
+# Funcionalidades
+📌 Cadastrar clientes – Registre novos usuários da biblioteca.
+📚 Cadastrar livros – Adicione novos títulos ao acervo.
+🔍 Buscar livros – Pesquise livros pelo título, autor ou categoria.
+🔄 Emprestar livros – Realize empréstimos de forma rápida e eficiente.
+✅ Consultar disponibilidade – Verifique se um livro está disponível ou emprestado.
+📜 Histórico de empréstimos – Acompanhe os livros emprestados e devolvidos.
+🧾 Emitir recibo – Gere comprovantes de empréstimos para os clientes.
+
+# Projeto Integrado IV - Sistema de Biblioteca 
+# Universidade Federal do Cariri 🎓
+Centro de Educação à Distância Curso de Análise e Desenvolvimento de Sistemas
+
+<p align="center">
+    <img src="https://private-user-images.githubusercontent.com/165864220/415410888-e7380072-f9d6-4309-b752-e31ddf457e97.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODg4LWU3MzgwMDcyLWY5ZDYtNDMwOS1iNzUyLWUzMWRkZjQ1N2U5Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01YTE2YWJjMmY3MmYyMGJjZDdiMTFiZjIzYTMxYzVjZGYxZTc5NGNiMjE0MDIxNmUwMjY4ZjNhOWYzNzdkMTlmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.meXLTQMeVRJZzb72FPC7kG_6qTimojkSmTtmUdWHbhE" alt="Saber Literário Logo" width="1000px">
+</p>
+
+<p align="center">
+
+</p>
 <h2 id="colab">🤝 Collaborators</h2>
 
 Special thank you for all people that contributed for this project.
