@@ -8,14 +8,20 @@
 
 </p>
 
+<td align="center">
+      <a href="#">
+        <img src="./Photos/[Logo] Saber Literário.png" alt="Saber Literário Logo" width="200px">
+        </a>
+    </td>
+
 Desenvolvendo um sistema didático e eficiente para pequenas bibliotecas!
 
-#Sobre o Projeto
+# Sobre o Projeto
 O Saber Literário é um sistema simples e intuitivo desenvolvido para atender bibliotecas de pequeno porte de forma prática e acessível. O objetivo do projeto é facilitar a gestão e o controle de acervos literários, permitindo que bibliotecas comunitárias, escolares ou de bairros consigam organizar seus livros e usuários de maneira eficiente e funcional.
 
 Pensado para ser simples de utilizar e didático, o sistema otimiza as tarefas rotineiras e contribui para a democratização do acesso à leitura e cultura. 
 
-🌟 Funcionalidades (o que já foi desenvolvido)
+# Funcionalidades (o que já foi desenvolvido)
 Versão 1 - Início do Projeto e Implementação Inicial
 Repositório: 
 
@@ -34,7 +40,7 @@ Sistema de busca otimizado para localizar obras no acervo rapidamente.
 Melhorias no fluxo de cadastro de usuários e registro de empréstimos.
 Correções de bugs identificados na versão inicial.
 
-#O que vem a seguir:
+# O que vem a seguir:
 Estamos trabalhando ativamente para deixar o Saber Literário ainda mais completo. No roadmap do projeto, temos:
 
 🔍 Relatórios dinâmicos: estatísticas sobre os livros mais emprestados, usuários ativos, entre outros;
