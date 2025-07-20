@@ -45,17 +45,11 @@ Estamos trabalhando ativamente para deixar o Saber Literário ainda mais complet
 
 # Funcionalidades
 📌 Cadastrar clientes – Registre novos usuários da biblioteca.
-
 📚 Cadastrar livros – Adicione novos títulos ao acervo.
-
 🔍 Buscar livros – Pesquise livros pelo título, autor ou categoria.
-
 🔄 Emprestar livros – Realize empréstimos de forma rápida e eficiente.
-
 ✅ Consultar disponibilidade – Verifique se um livro está disponível ou emprestado.
-
 📜 Histórico de empréstimos – Acompanhe os livros emprestados e devolvidos.
-
 🧾 Emitir recibo – Gere comprovantes de empréstimos para os clientes.
 
 
