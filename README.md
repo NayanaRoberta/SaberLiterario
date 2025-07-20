@@ -17,17 +17,15 @@ Pensado para ser simples de utilizar e didático, o sistema otimiza as tarefas r
 
 # Funcionalidades (o que já foi desenvolvido)
 Versão 1 - Início do Projeto e Implementação Inicial
-Repositório: 
-
+Repositório:<br>
 Na primeira versão do projeto, foram introduzidas as seguintes funcionalidades:
 Estruturamos nossa base inicial para cadastro de livros.
 Criamos um template básico de interface para fácil interação com o usuário.
 Desenvolvemos o sistema de cadastro básico de usuários e gerenciadores.
+
+
 Versão 2 - Melhorias e Ajustes
-Repositório: 
-
-github.com
-
+Repositório: <br>
 Foram feitos ajustes importantes para tornar o sistema ainda mais funcional:
 Implementação de melhorias na interface, garantindo maior acessibilidade.
 Sistema de busca otimizado para localizar obras no acervo rapidamente.
@@ -37,10 +35,10 @@ Correções de bugs identificados na versão inicial.
 # O que vem a seguir:
 Estamos trabalhando ativamente para deixar o Saber Literário ainda mais completo. No roadmap do projeto, temos:
 
-🔍 Relatórios dinâmicos: estatísticas sobre os livros mais emprestados, usuários ativos, entre outros;
-🖥️ Interface Web responsiva: tornar o sistema utilizável em dispositivos móveis e tablets;
-📂 Exportação de relatórios: permitir exportar informações em formatos como PDF e Excel;
-💬 Mensagens e notificações: enviar lembretes automáticos para devolução de livros atrasados.
+🔍 Relatórios dinâmicos: estatísticas sobre os livros mais emprestados, usuários ativos, entre outros;<br>
+🖥️ Interface Web responsiva: tornar o sistema utilizável em dispositivos móveis e tablets;<br>
+📂 Exportação de relatórios: permitir exportar informações em formatos como PDF e Excel;<br>
+💬 Mensagens e notificações: enviar lembretes automáticos para devolução de livros atrasados.<br>
 
 
 # Funcionalidades
