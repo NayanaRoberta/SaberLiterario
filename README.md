@@ -18,13 +18,13 @@ Special thank you for all people that contributed for this project.
       <a href="#">
         <img src="https://avatars.githubusercontent.com/u/117601283?v=4" width="100px;" alt="VitorRafaelx Profile Picture"/><br>
         <sub>
-          <b>[Vitor Rafael](https://github.com/VitorRafaelx)</b>
+          <b>Vitor Rafael</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://github.com/account" width="100px;" alt="Nayana Roberta Picture"/><br>
+        <img src="https://avatars.githubusercontent.com/u/169853314?v=4" width="100px;" alt="Nayana Roberta Picture"/><br>
         <sub>
           <b>Nayana Roberta</b>
         </sub>
@@ -35,6 +35,22 @@ Special thank you for all people that contributed for this project.
         <img src="https://avatars.githubusercontent.com/u/197955069?v=4" width="100px;" alt="Jerdison"/><br>
         <sub>
           <b>Jerdison</b>
+        </sub>
+      </a>
+    </td>
+      <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/169839417?s=64&v=4" width="100px;" alt="Jerdison"/><br>
+        <sub>
+          <b>Emanuel Palácio</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/165864220?s=64&v=4" width="100px;" alt="Jerdison"/><br>
+        <sub>
+          <b>Jorge Luiz</b>
         </sub>
       </a>
     </td>
