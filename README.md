@@ -1,5 +1,5 @@
 ﻿<p align="center">
-    <img src="https://github.com/NayanaRoberta/SaberLiterario/blob/main/photos/%5BLogo%5D%20Saber%20Liter%C3%A1rio.png?raw=true" alt="Saber Literário Logo" width="1000px">
+    <img src="https://github.com/NayanaRoberta/SaberLiterario/blob/main/photos/image.png?raw=true" alt="Saber Literário Logo" width="1000px">
 </p>
 
 <p align="center">
