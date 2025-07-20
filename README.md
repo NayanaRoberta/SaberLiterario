@@ -1,18 +1,12 @@
 ﻿# SaberLiterario
 
 <p align="center">
-    <img src="./Photos/[Logo] Saber Literário.png" alt="Saber Literário Logo" width="200px">
+    <img src="https://github.com/NayanaRoberta/SaberLiterario/blob/main/photos/%5BLogo%5D%20Saber%20Liter%C3%A1rio.png?raw=true" alt="Saber Literário Logo" width="200px">
 </p>
 
 <p align="center">
 
 </p>
-
-<td align="center">
-      <a href="#">
-        <img src="./Photos/[Logo] Saber Literário.png" alt="Saber Literário Logo" width="200px">
-        </a>
-    </td>
 
 Desenvolvendo um sistema didático e eficiente para pequenas bibliotecas!
 
