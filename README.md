@@ -6,7 +6,9 @@
 
 </p>
 
-Desenvolvendo um sistema didático e eficiente para pequenas bibliotecas!
+# Projeto Integrado IV - Sistema de Biblioteca 
+# Universidade Federal do Cariri 🎓
+Centro de Educação à Distância Curso de Análise e Desenvolvimento de Sistemas
 
 # Sobre o Projeto
 O Saber Literário é um sistema simples e intuitivo desenvolvido para atender bibliotecas de pequeno porte de forma prática e acessível. O objetivo do projeto é facilitar a gestão e o controle de acervos literários, permitindo que bibliotecas comunitárias, escolares ou de bairros consigam organizar seus livros e usuários de maneira eficiente e funcional.
@@ -50,12 +52,24 @@ Estamos trabalhando ativamente para deixar o Saber Literário ainda mais complet
 📜 Histórico de empréstimos – Acompanhe os livros emprestados e devolvidos.
 🧾 Emitir recibo – Gere comprovantes de empréstimos para os clientes.
 
-# Projeto Integrado IV - Sistema de Biblioteca 
-# Universidade Federal do Cariri 🎓
-Centro de Educação à Distância Curso de Análise e Desenvolvimento de Sistemas
 
 <p align="center">
     <img src="https://private-user-images.githubusercontent.com/165864220/415410888-e7380072-f9d6-4309-b752-e31ddf457e97.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODg4LWU3MzgwMDcyLWY5ZDYtNDMwOS1iNzUyLWUzMWRkZjQ1N2U5Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01YTE2YWJjMmY3MmYyMGJjZDdiMTFiZjIzYTMxYzVjZGYxZTc5NGNiMjE0MDIxNmUwMjY4ZjNhOWYzNzdkMTlmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.meXLTQMeVRJZzb72FPC7kG_6qTimojkSmTtmUdWHbhE" alt="Saber Literário Logo" width="1000px">
+</p>
+
+<p align="center">
+
+</p>
+
+<p align="center">
+    <img src="https://private-user-images.githubusercontent.com/165864220/415410865-c1eae3d8-f9c3-42d3-bd29-a10844c0923c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODY1LWMxZWFlM2Q4LWY5YzMtNDJkMy1iZDI5LWExMDg0NGMwOTIzYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yMDU1MmNiM2M5ZWQ2OGYxMzk3N2JlYzRlNWUzZjlkZTEwZDhkNTg4YTUyZTU5YzYzNzEyMGQxNDI4NDI3MTRlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ofz6MOVBIY3wh18RA0-Z2jwlf1PNCk2d3imqwFSjf5g" alt="Saber Literário Logo" width="1000px">
+</p>
+
+<p align="center">
+
+</p>
+<p align="center">
+    <img src="https://private-user-images.githubusercontent.com/165864220/415410846-bef704c1-806f-4e73-bc8a-2d0fb0327214.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODQ2LWJlZjcwNGMxLTgwNmYtNGU3My1iYzhhLTJkMGZiMDMyNzIxNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NDQzZjQzYTFiODViNzdkYjNmZGI4MGI2NDk0MTU2ZDQ4NDRhYjNkZDc2MWQwYTVhY2Q5YWE3ZjkyNjk0MTkwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Da1PQgdPQYbp-iPpdGsMz69BhdleGoc0tqNPSJbSnrg" alt="Saber Literário Logo" width="1000px">
 </p>
 
 <p align="center">
