@@ -1,22 +1,21 @@
-﻿<p align="center">
+﻿# Projeto Integrado IV - Sistema de Biblioteca 
+# Universidade Federal do Cariri 🎓
+Centro de Educação à Distância Curso de Análise e Desenvolvimento de Sistemas
+
+<p align="center">
     <img src="https://github.com/NayanaRoberta/SaberLiterario/blob/main/photos/image.png?raw=true" alt="Saber Literário Logo" width="1000px">
 </p>
 
 <p align="center">
 
 </p>
-
-# Projeto Integrado IV - Sistema de Biblioteca 
-# Universidade Federal do Cariri 🎓
-Centro de Educação à Distância Curso de Análise e Desenvolvimento de Sistemas
-
 # Sobre o Projeto
 O Saber Literário é um sistema simples e intuitivo desenvolvido para atender bibliotecas de pequeno porte de forma prática e acessível. O objetivo do projeto é facilitar a gestão e o controle de acervos literários, permitindo que bibliotecas comunitárias, escolares ou de bairros consigam organizar seus livros e usuários de maneira eficiente e funcional.
 
 Pensado para ser simples de utilizar e didático, o sistema otimiza as tarefas rotineiras e contribui para a democratização do acesso à leitura e cultura. 
 
 # Funcionalidades (o que já foi desenvolvido)
-Versão 1 - Início do Projeto e Implementação Inicial
+Versão 1 - Início do Projeto e Implementação Inicial<br>
 Repositório:<br>
 Na primeira versão do projeto, foram introduzidas as seguintes funcionalidades:
 Estruturamos nossa base inicial para cadastro de livros.
@@ -24,7 +23,7 @@ Criamos um template básico de interface para fácil interação com o usuário.
 Desenvolvemos o sistema de cadastro básico de usuários e gerenciadores.
 
 
-Versão 2 - Melhorias e Ajustes
+Versão 2 - Melhorias e Ajustes<br>
 Repositório: <br>
 Foram feitos ajustes importantes para tornar o sistema ainda mais funcional:
 Implementação de melhorias na interface, garantindo maior acessibilidade.
