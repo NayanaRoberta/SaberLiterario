@@ -75,6 +75,14 @@ Estamos trabalhando ativamente para deixar o Saber Literário ainda mais complet
 <p align="center">
 
 </p>
+
+<p align="center">
+    <img src="https://private-user-images.githubusercontent.com/165864220/415410829-356de5cc-ccd0-4ebe-8bfd-480e8a65eb4c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODI5LTM1NmRlNWNjLWNjZDAtNGViZS04YmZkLTQ4MGU4YTY1ZWI0Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03OTYyZjMzZDY5MWQ4YmQ1ZjM4MjcyYzZiNjgwMjVjZTBhNzc4MGFlODY3NTRhMzdjY2YyMmMyOWUzNGFkNDBkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.LxreZphuIX6bLj43j-CAqqg0OG2tAoNUT96jh_HCobM" alt="Saber Literário Logo" width="1000px">
+</p>
+
+<p align="center">
+
+</p>
 <h2 id="colab">🤝 Collaborators</h2>
 
 Special thank you for all people that contributed for this project.
@@ -125,18 +133,18 @@ Special thank you for all people that contributed for this project.
 </table>
 
 
-
-
-<h2 id="license">License 📃 </h2>
-
-This project is under [MIT](./LICENSE) license
-
 🕓 Histórico do Projeto
 Este repositório corresponde à Versão 3 do projeto. Abaixo, estão os links para as versões anteriores:
 
 Versão 1 - [Início do Projeto e Implementação Inicial](https://github.com/NayanaRoberta/RefugioLiterario)
 
 Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario)
+
+<h2 id="license">License 📃 </h2>
+
+This project is under [MIT](./LICENSE) license
+
+
 
 
 
