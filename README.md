@@ -18,23 +18,23 @@ Special thank you for all people that contributed for this project.
       <a href="#">
         <img src="https://avatars.githubusercontent.com/u/117601283?v=4" width="100px;" alt="VitorRafaelx Profile Picture"/><br>
         <sub>
-          <b>torRafaelx</b>
+          <b>[Vitor Rafael](https://github.com/VitorRafaelx)</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://t.ctcdn.com.br/n7eZ74KAcU3iYwnQ89-ul9txVxc=/400x400/smart/filters:format(webp)/i490769.jpeg" width="100px;" alt="Elon Musk Picture"/><br>
+        <img src="https://github.com/account" width="100px;" alt="Nayana Roberta Picture"/><br>
         <sub>
-          <b>Elon Musk</b>
+          <b>Nayana Roberta</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
+        <img src="https://avatars.githubusercontent.com/u/197955069?v=4" width="100px;" alt="Jerdison"/><br>
         <sub>
-          <b>Steve Jobs</b>
+          <b>Jerdison</b>
         </sub>
       </a>
     </td>
