@@ -97,7 +97,7 @@ Git
 
 Clone este repositório: 
 <p align="center">
-    <img src="https://vscode.dev/github/NayanaRoberta/SaberLiterario/blob/main/photos/Clone%20este%20reposit%C3%B3rio.PNG" alt="Copiar" width="1000px">
+    <img src="https://github.com/NayanaRoberta/SaberLiterario/blob/main/photos/Clone%20este%20reposit%C3%B3rio.PNG?raw=true" alt="Copiar" width="1000px">
 </p>
 
 <p align="center">
