@@ -10,7 +10,14 @@ Centro de Educação à Distância Curso de Análise e Desenvolvimento de Sistem
 
 </p>
 # Sobre o Projeto
-O Saber Literário é um sistema simples e intuitivo desenvolvido para atender bibliotecas de pequeno porte de forma prática e acessível. O objetivo do projeto é facilitar a gestão e o controle de acervos literários, permitindo que bibliotecas comunitárias, escolares ou de bairros consigam organizar seus livros e usuários de maneira eficiente e funcional.
+Sobre o Projeto
+O Saber Literário é um sistema projetado para simplificar as rotinas de bibliotecas de pequeno porte, oferecendo ferramentas simples de gerenciamento que são fáceis de entender e usar. O projeto foi desenvolvido com base nos princípios de acessibilidade e usabilidade, visando atender tanto bibliotecas comunitárias quanto escolares.
+
+Com este sistema, você pode:
+
+📚 Cadastrar livros e usuários;
+🔍 Buscar e organizar acervos facilmente;
+🖥️ Melhorar a gestão de empréstimos e devoluções.
 
 Pensado para ser simples de utilizar e didático, o sistema otimiza as tarefas rotineiras e contribui para a democratização do acesso à leitura e cultura. 
 
@@ -50,6 +57,7 @@ Estamos trabalhando ativamente para deixar o Saber Literário ainda mais complet
 🧾 Emitir recibo – Gere comprovantes de empréstimos para os clientes<br> 
 
 
+
 <p align="center">
     <img src="https://private-user-images.githubusercontent.com/165864220/415410888-e7380072-f9d6-4309-b752-e31ddf457e97.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODg4LWU3MzgwMDcyLWY5ZDYtNDMwOS1iNzUyLWUzMWRkZjQ1N2U5Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01YTE2YWJjMmY3MmYyMGJjZDdiMTFiZjIzYTMxYzVjZGYxZTc5NGNiMjE0MDIxNmUwMjY4ZjNhOWYzNzdkMTlmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.meXLTQMeVRJZzb72FPC7kG_6qTimojkSmTtmUdWHbhE" alt="Saber Literário Logo" width="1000px">
 </p>
@@ -77,6 +85,19 @@ Estamos trabalhando ativamente para deixar o Saber Literário ainda mais complet
     <img src="https://private-user-images.githubusercontent.com/165864220/415410829-356de5cc-ccd0-4ebe-8bfd-480e8a65eb4c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODI5LTM1NmRlNWNjLWNjZDAtNGViZS04YmZkLTQ4MGU4YTY1ZWI0Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03OTYyZjMzZDY5MWQ4YmQ1ZjM4MjcyYzZiNjgwMjVjZTBhNzc4MGFlODY3NTRhMzdjY2YyMmMyOWUzNGFkNDBkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.LxreZphuIX6bLj43j-CAqqg0OG2tAoNUT96jh_HCobM" alt="Saber Literário Logo" width="1000px">
 </p>
 
+# Configuração do Projeto
+Siga as instruções abaixo para configurar e rodar o projeto em sua máquina local:
+
+1. Pré-requisitos
+Certifique-se de que os itens abaixo estão instalados no seu ambiente:
+
+Node.js (versão 16 ou superior)
+npm (gerenciador de pacotes do Node.js)
+Git
+
+Clone este repositório:
+
+2. Passo a Passo para Instalação
 <p align="center">
 
 </p>
