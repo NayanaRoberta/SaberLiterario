@@ -15,9 +15,9 @@ O Saber Literário é um sistema projetado para simplificar as rotinas de biblio
 
 Com este sistema, você pode:
 
-📚 Cadastrar livros e usuários;
-🔍 Buscar e organizar acervos facilmente;
-🖥️ Melhorar a gestão de empréstimos e devoluções.
+📚 Cadastrar livros e usuários;<br>
+🔍 Buscar e organizar acervos facilmente;<br>
+🖥️ Melhorar a gestão de empréstimos e devoluções.<br>
 
 Pensado para ser simples de utilizar e didático, o sistema otimiza as tarefas rotineiras e contribui para a democratização do acesso à leitura e cultura. 
 
@@ -95,8 +95,10 @@ Node.js (versão 16 ou superior)
 npm (gerenciador de pacotes do Node.js)
 Git
 
-Clone este repositório:
-
+Clone este repositório: 
+<p align="center">
+    <img src="https://drive.google.com/file/d/1vkrmvia6w4t49u1ywmLubEEA106TSyVE/view?usp=sharing" alt="Copiar" width="1000px">
+</p>
 2. Passo a Passo para Instalação
 <p align="center">
 
