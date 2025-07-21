@@ -97,7 +97,7 @@ Git
 
 Clone este repositório: 
 <p align="center">
-    <img src="g:\Meu Drive\Projeto Integrado\Projeto Integrado IV\SaberLiterario\SaberLiterario\saber-literário\photos\Clone este repositório.PNG" alt="Copiar" width="1000px">
+    <img src="https://vscode.dev/github/NayanaRoberta/SaberLiterario/blob/main/photos/Clone%20este%20reposit%C3%B3rio.PNG" alt="Copiar" width="1000px">
 </p>
 2. Passo a Passo para Instalação
 <p align="center">
