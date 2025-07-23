@@ -70,7 +70,7 @@ Este projeto utiliza **Integração Contínua (CI)** por meio do **GitHub Action
 
 ### O que é Integração Contínua e por que é importante? 
 
-A Integração Contínua é uma prática de desenvolvimento de software onde os desenvolvedores integram seu código em um repositório compartilhado várias vezes ao dia. Ou seja é quando os desenvolvedores vão juntando seu código em um repositório compartilhado várias vezes ao dia, pra garantir que tudo funcione bem junto. Cada integração é imediatamente verificada por um build automatizado (processo de testar e preparar automaticamente), permitindo a **detecção rápida de erros e conflitos**.
+A Integração Contínua é uma prática de desenvolvimento de software onde os desenvolvedores integram seu código em um repositório compartilhado várias vezes ao dia. Ou seja é quando os desenvolvedores vão juntando seu código em um repositório compartilhado, pra garantir que tudo funcione bem junto. Cada integração é imediatamente verificada por um build automatizado (processo de testar e preparar automaticamente), permitindo a **detecção rápida de erros e conflitos**.
 
 Para quem está iniciando em programação, como nós da UFCA, a CI é **extremamente importante**:
 *   **Garante a qualidade do código desde o início**: Ajuda a identificar e corrigir problemas (como erros de sintaxe em HTML/CSS ou links quebrados) de forma automática e contínua, prevenindo que pequenos erros se tornem grandes desafios no futuro.
@@ -89,7 +89,7 @@ O principal objetivo ao implementar a Integração Contínua no "Saber Literári
 Configuramos o GitHub Actions para executar automaticamente uma série de validações a cada atualização do código (**_push_**) na branch principal (`main`) ou a cada **_pull request_** As configurações de cada tarefa de automação da CI foram definidas em **arquivos `.yml` distintos**, localizados dentro do diretório **`.github/workflows/`** do nosso repositório.
 
 A estrutura geral de cada arquivo de workflow foi definida para ser clara e modular, facilitando a leitura e manutenção 
-*   `name`: Define um nome claro e descritivo para o workflow, que é visível na aba "Actions" do GitHub. Isso facilita a identificação rápida da tarefa automatizada que está sendo executada [11].
+*   `name`: Define um nome claro e descritivo para o workflow, que é visível na aba "Actions" do GitHub. Isso facilita a identificação rápida da tarefa automatizada que está sendo executada.
 *   `on`: Especifica os eventos de acionamento que iniciarão o workflow. Garantindo que as verificações automáticas ocorram nos momentos certos do ciclo de desenvolvimento.
 *   `jobs`: Contém a definição de um ou mais trabalhos (jobs) a serem executados.
 *   `runs-on`: Especifica o sistema operacional da máquina virtual onde as etapas serão processadas.
