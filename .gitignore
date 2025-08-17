@@ -1,0 +1,12 @@
+# Ignorar dependências do Node.js
+node_modules/
+
+# Arquivo de log
+npm-debug.log*
+
+# Builds e diretórios de saída
+dist/
+build/
+
+# Configurações do editor de texto
+.vscode/
