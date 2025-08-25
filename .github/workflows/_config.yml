@@ -1,0 +1,4 @@
+exclude:
+  - node_modules
+  - saber-literario-backend/node_modules
+
