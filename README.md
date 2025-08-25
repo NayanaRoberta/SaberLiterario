@@ -118,7 +118,7 @@ Para alcançar este objetivo, implementamos as seguintes diretrizes e funcionali
 
 ### 📖 Guia de Uso da API de Livros
 
-Este guia rápido vai te ensinar a rodar o servidor da API localmente e a usar as rotas disponíveis para gerenciar a lista de livros.
+Segue abixo as instruções para rodar o servidor da API localmente e a usar as rotas disponíveis para gerenciar os livros.
 
 #### 🚀 Como Rodar a API Localmente
 
@@ -137,9 +137,9 @@ Para começar, você precisa ter o **Node.js** instalado no seu computador. Se v
 
 -----
 
-### 📚 Rotas da API e Exemplos de Uso
+### 📚  Exemplos de das Uso Rotas da API
 
-A API de livros tem algumas rotas simples. Você pode testá-las usando ferramentas como o **Postman**, o **Insomnia**, ou até mesmo o seu navegador.
+A API de livros tem algumas rotas simples que você pode testá-las usando ferramentas como o **Postman**, o **Insomnia**, ou até mesmo o seu navegador.
 
 #### 1\. Ver Todos os Livros
 
@@ -164,7 +164,7 @@ Esta rota retorna a lista completa de livros que a API está gerenciando no mome
     ]
     ```
 
-#### 2\. Buscar um Livro Específico
+#### 2\. Procurar um Livro Específico
 
 Se você precisa dos detalhes de apenas um livro, use o ID dele na URL.
 
@@ -223,7 +223,7 @@ Esta rota é usada para mudar o status de um livro, por exemplo, de "disponível
   * Os dados dos livros não são salvos em um banco de dados. Se você desligar o servidor, a lista de livros será redefinida ao estado inicial quando você ligar de novo.
 
 
-📚 Possíveis Usos da Nossa API  
+### 📚 Possíveis Usos da Nossa API  
 
 O **Saber Literário** foi pensado para simular de forma simples as rotinas de uma biblioteca.  
 Mesmo sendo um projeto simples, nossas rotas podem ser usadas em cenários reais em outros sistemas de gerenciamento de bibliotecas comunitárias ou escolares que não exigem um alto nivel de complexidade.  
@@ -330,6 +330,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
