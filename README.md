@@ -115,8 +115,9 @@ Para alcançar este objetivo, implementamos as seguintes diretrizes e funcionali
 * Melhorias Contínuas: Na Versão 2 do projeto, foram introduzidas melhorias significativas na interface para garantir ainda maior acessibilidade. Interface Web responsiva para tornar o sistema utilizável em diversos dispositivos, como celulares e tablets.
 * Qualidade de Código e Conteúdo: A Integração Contínua (CI) com validações de HTML e CSS, detecção de links quebrados e verificação de ortografia contribui para uma base de código e conteúdo mais robusta e livre de erros, o que indiretamente apoia a acessibilidade ao garantir que tecnologias assistivas possam interpretar o site corretamente.
 
+-----
 
-### 📖 Guia de Uso da API de Livros
+### 📖 Como usar nossa API de Livros
 
 Segue abixo as instruções para rodar o servidor da API localmente e a usar as rotas disponíveis para gerenciar os livros.
 
@@ -341,6 +342,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
