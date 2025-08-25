@@ -115,6 +115,23 @@ Para alcançar este objetivo, implementamos as seguintes diretrizes e funcionali
 * Melhorias Contínuas: Na Versão 2 do projeto, foram introduzidas melhorias significativas na interface para garantir ainda maior acessibilidade. Interface Web responsiva para tornar o sistema utilizável em diversos dispositivos, como celulares e tablets.
 * Qualidade de Código e Conteúdo: A Integração Contínua (CI) com validações de HTML e CSS, detecção de links quebrados e verificação de ortografia contribui para uma base de código e conteúdo mais robusta e livre de erros, o que indiretamente apoia a acessibilidade ao garantir que tecnologias assistivas possam interpretar o site corretamente.
 
+📚 Possíveis Usos da Nossa API  
+
+O **Saber Literário** foi pensado para simular de forma simples as rotinas de uma biblioteca.  
+Mesmo sendo um projeto simples, nossas rotas podem ser usadas em cenários reais em outros sistemas de gerenciamento de bibliotecas comunitárias ou escolares que não exigem um alto nivel de complexidade.  
+
+### 🔍 Listar livros disponíveis  
+A rota que retorna a lista simulada de livros pode ser usada, em uma página de catálogo ou uma lista, permitindo que qualquer um que tenha acesso possa consultar rapidamente os títulos disponíveis antes de ir até a biblioteca.  
+
+### ➕ Adicionar novos livros ao acervo  
+A rota de cadastro de novos livros pode ser aplicada no dia a dia de um bibliotecário para registrar novas aquisições.  
+Em um sistema real, esse recurso seria integrado a formulários de entrada de dados ou até mesmo conectado a um banco de dados para controle permanente.  
+
+### 🔄 Atualizar o status de empréstimo  
+A rota que altera o status de cada livro (**emprestado/disponível**) é a base para um sistema de controle de empréstimos.  
+Isso permite que os responsáveis pela biblioteca mantenham o controle do acervo em tempo real, evitando conflitos ou perda de informações.  
+
+
 
 <p align="center">
     <img src="https://private-user-images.githubusercontent.com/165864220/415410888-e7380072-f9d6-4309-b752-e31ddf457e97.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU3MzE0MjAsIm5iZiI6MTc1NTczMTEyMCwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODg4LWU3MzgwMDcyLWY5ZDYtNDMwOS1iNzUyLWUzMWRkZjQ1N2U5Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgyMFQyMzA1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mNjFlN2IwZWVlNjQ1ODk4ZTAxNmYxMzFkNGMwNzEzNTNkMGIyOWQ1MDMzMzEzMWRkYjI0MTc2YmRlYmI2ZWJkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ydYYpURF3CooAGvl8H0hExOUgYm9yzF8BQkCpEwBA-4" alt="Saber Literário Logo" width="1000px">
@@ -205,6 +222,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
