@@ -119,7 +119,7 @@ Para alcançar este objetivo, implementamos as seguintes diretrizes e funcionali
 
 ### 📖 Como usar nossa API de Livros
 
-Segue abixo as instruções para rodar o servidor da API localmente e a usar as rotas disponíveis para gerenciar os livros.
+Segue abaixo as instruções para rodar o servidor da API localmente e a usar as rotas disponíveis para gerenciar os livros.
 
 #### 🚀 Como Rodar a API Localmente
 
@@ -342,6 +342,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
