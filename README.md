@@ -215,6 +215,16 @@ Esta rota é usada para mudar o status de um livro, por exemplo, de "disponível
     }
     ```
 
+
+
+### Por Que Usamos Estas Rotas?
+
+O design da nossa API segue uma abordagem simples para gerenciar os livros. Cada rota tem um propósito claro e direto:
+
+* **`GET /api/livros`**: Esta rota serve para **ler (retornar)** todos os livros. É a porta de entrada para quem quer ver a lista completa do acervo. É a primeira coisa que um usuário ou sistema externo faria.
+* **`GET /api/livros/:id`**: Já esta rota foi criada para a necessidade de **ler (retornar)** os detalhes de um livro específico. Em vez de carregar a lista inteira, você pode buscar diretamente o livro de interesse usando o seu `ID`. Isso torna a busca mais eficiente.
+* **`PUT /api/livros/:id/status`**: Esta rota é usada para **atualizar** o status de um livro. Em vez de permitir que o usuário mude qualquer dado, a rota é específica para alterar o `status` (se está "disponível" ou "emprestado"). Isso simplifica a lógica e evita alterações indesejadas em outros campos, como o título ou ID.
+
 -----
 
 ### 📝 Observações
@@ -222,6 +232,7 @@ Esta rota é usada para mudar o status de um livro, por exemplo, de "disponível
   * As rotas `/` e `/api/saudacao` são apenas para testes e servem para garantir que o servidor está funcionando.
   * Os dados dos livros não são salvos em um banco de dados. Se você desligar o servidor, a lista de livros será redefinida ao estado inicial quando você ligar de novo.
 
+-----
 
 ### 📚 Possíveis Usos da Nossa API  
 
@@ -330,6 +341,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
