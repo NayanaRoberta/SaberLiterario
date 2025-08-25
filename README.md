@@ -115,6 +115,114 @@ Para alcançar este objetivo, implementamos as seguintes diretrizes e funcionali
 * Melhorias Contínuas: Na Versão 2 do projeto, foram introduzidas melhorias significativas na interface para garantir ainda maior acessibilidade. Interface Web responsiva para tornar o sistema utilizável em diversos dispositivos, como celulares e tablets.
 * Qualidade de Código e Conteúdo: A Integração Contínua (CI) com validações de HTML e CSS, detecção de links quebrados e verificação de ortografia contribui para uma base de código e conteúdo mais robusta e livre de erros, o que indiretamente apoia a acessibilidade ao garantir que tecnologias assistivas possam interpretar o site corretamente.
 
+
+### 📖 Guia de Uso da API de Livros
+
+Este guia rápido vai te ensinar a rodar o servidor da API localmente e a usar as rotas disponíveis para gerenciar a lista de livros.
+
+#### 🚀 Como Rodar a API Localmente
+
+Para começar, você precisa ter o **Node.js** instalado no seu computador. Se você já tem, é só seguir os passos abaixo:
+
+1.  **Salve o Código**: Salve o código da API em um arquivo com o nome `app.js`.
+2.  **Instale as Dependências**: Abra o terminal na mesma pasta onde você salvou o arquivo e digite o seguinte comando. Ele vai baixar tudo o que o Express.js precisa para funcionar.
+    ```bash
+    npm install express
+    ```
+3.  **Inicie o Servidor**: Agora é só rodar a API\! No terminal, digite:
+    ```bash
+    node app.js
+    ```
+    Se tudo der certo, você verá a mensagem `Servidor rodando em http://localhost:3000` no seu terminal. Isso significa que a API está no ar e pronta para ser usada.
+
+-----
+
+### 📚 Rotas da API e Exemplos de Uso
+
+A API de livros tem algumas rotas simples. Você pode testá-las usando ferramentas como o **Postman**, o **Insomnia**, ou até mesmo o seu navegador.
+
+#### 1\. Ver Todos os Livros
+
+Esta rota retorna a lista completa de livros que a API está gerenciando no momento.
+
+  * **URL**: `http://localhost:3000/api/livros`
+  * **Método**: `GET`
+  * **O que você faz**: Acessa a URL no seu navegador ou em uma ferramenta como o Postman.
+  * **Exemplo de Resposta (sucesso)**:
+    ```json
+    [
+      {
+        "id": 1,
+        "titulo": "O Pequeno Príncipe",
+        "status": "disponível"
+      },
+      {
+        "id": 2,
+        "titulo": "Dom Casmurro",
+        "status": "disponível"
+      }
+    ]
+    ```
+
+#### 2\. Buscar um Livro Específico
+
+Se você precisa dos detalhes de apenas um livro, use o ID dele na URL.
+
+  * **URL**: `http://localhost:3000/api/livros/1` (troque o `1` pelo ID que você quer buscar)
+  * **Método**: `GET`
+  * **Exemplo de Resposta (sucesso)**:
+    ```json
+    {
+      "id": 1,
+      "titulo": "O Pequeno Príncipe",
+      "status": "disponível"
+    }
+    ```
+  * **Exemplo de Resposta (erro - livro não encontrado)**:
+    ```json
+    {
+      "erro": "Livro não encontrado."
+    }
+    ```
+
+#### 3\. Atualizar o Status de um Livro
+
+Esta rota é usada para mudar o status de um livro, por exemplo, de "disponível" para "emprestado".
+
+  * **URL**: `http://localhost:3000/api/livros/1/status` (troque o `1` pelo ID do livro que você quer atualizar)
+  * **Método**: `PUT`
+  * **Corpo da Requisição (JSON)**: Você precisa enviar um JSON com o novo status. **Atenção**: o `status` deve ser `"disponível"` ou `"emprestado"`.
+    ```json
+    {
+      "status": "emprestado"
+    }
+    ```
+  * **Exemplo de Resposta (sucesso)**:
+    ```json
+    {
+      "mensagem": "Status atualizado com sucesso!",
+      "livro": {
+        "id": 1,
+        "titulo": "O Pequeno Príncipe",
+        "status": "emprestado"
+      }
+    }
+    ```
+  * **Exemplo de Resposta (erro - status inválido)**:
+    ```json
+    {
+      "erro": "Status inválido. Use 'disponível' ou 'emprestado'."
+    }
+    ```
+
+-----
+
+### 📝 Observações
+
+  * As rotas `/` e `/api/saudacao` são apenas para testes e servem para garantir que o servidor está funcionando.
+  * Os dados dos livros não são salvos em um banco de dados. Se você desligar o servidor, a lista de livros será redefinida ao estado inicial quando você ligar de novo.
+
+
 📚 Possíveis Usos da Nossa API  
 
 O **Saber Literário** foi pensado para simular de forma simples as rotinas de uma biblioteca.  
@@ -222,6 +330,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
