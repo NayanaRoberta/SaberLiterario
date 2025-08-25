@@ -121,15 +121,15 @@ O **Saber Literário** foi pensado para simular de forma simples as rotinas de u
 Mesmo sendo um projeto simples, nossas rotas podem ser usadas em cenários reais em outros sistemas de gerenciamento de bibliotecas comunitárias ou escolares que não exigem um alto nivel de complexidade.  
 
 ### 🔍 Listar livros disponíveis  
-A rota que retorna a lista simulada de livros pode ser usada, em uma página de catálogo ou uma lista, permitindo que qualquer um que tenha acesso possa consultar rapidamente os títulos disponíveis antes de ir até a biblioteca.  
+A rota que retorna a lista simulada de livros pode ser usada, em uma página de catálogo ou uma lista, permitindo que qualquer um que tenha acesso possa consultar rapidamente os títulos disponíveis antes de ir até o local da biblioteca.  
 
 ### ➕ Adicionar novos livros ao acervo  
-A rota de cadastro de novos livros pode ser aplicada no dia a dia de um bibliotecário para registrar novas aquisições.  
-Em um sistema real, esse recurso seria integrado a formulários de entrada de dados ou até mesmo conectado a um banco de dados para controle permanente.  
+A rota de cadastro de novos livros pode ser aplicada no dia a dia de um bibliotecário para registrar os novos livros que chegam ao acervo.  
+Em um sistema mais complexo, esse recurso seria integrado a formulários de entrada de dados e conectado a um banco de dados para controle permanente e garantir a integridade dos dados.  
 
 ### 🔄 Atualizar o status de empréstimo  
-A rota que altera o status de cada livro (**emprestado/disponível**) é a base para um sistema de controle de empréstimos.  
-Isso permite que os responsáveis pela biblioteca mantenham o controle do acervo em tempo real, evitando conflitos ou perda de informações.  
+A rota que altera o status de cada livro (**emprestado/disponível**) é de grande utilidade para um sistema de controle de empréstimos.  
+Isso permite que os responsáveis pela biblioteca mantenham o controle do acervo em tempo real, evitando conflitos ou perda de informações importantes.  
 
 
 
@@ -222,6 +222,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
