@@ -142,11 +142,42 @@ Para começar, você precisa ter o **Node.js** instalado no seu computador. Se v
 
 A API de livros tem algumas rotas simples que você pode testá-las usando ferramentas como o **Postman**, o **Insomnia**, ou até mesmo o seu navegador.
 
-#### 1\. Ver Todos os Livros
+#### 1\. Adicionar um Livros
+
+Esta rota adiciona um novo licro a lista completa de livros que a API está gerenciando no momento.
+
+  * **URL**: `http://localhost:3000/livros`
+  * **Método**: `POST`
+  * **Corpo da Requisição (JSON)**: Você precisa enviar um JSON com o titulo e o status. **Atenção**: o `status` deve ser `"disponível"` ou `"emprestado"`.
+    ```json
+    {
+      "titulo": "As viagens de Gulliver",
+      "status": "disponível"
+    }
+    ```
+  * **Exemplo de Resposta (sucesso)**:
+    ```json
+    {
+        "mensagem": "Livro cadastrado com sucesso!",
+        "livro": {
+            "id": 4,
+            "titulo": "As viagens de Gulliver",
+            "status": "disponível"
+    }
+}
+    ```
+  * **Exemplo de Resposta (erro - status inválido)**:
+    ```json
+    {
+      "erro": "O campo \"titulo\" é obrigatório."
+    }
+    ```
+
+#### 2\. Ver Todos os Livros
 
 Esta rota retorna a lista completa de livros que a API está gerenciando no momento.
 
-  * **URL**: `http://localhost:3000/api/livros`
+  * **URL**: `http://localhost:3000/livros`
   * **Método**: `GET`
   * **O que você faz**: Acessa a URL no seu navegador ou em uma ferramenta como o Postman.
   * **Exemplo de Resposta (sucesso)**:
@@ -165,11 +196,12 @@ Esta rota retorna a lista completa de livros que a API está gerenciando no mome
     ]
     ```
 
-#### 2\. Procurar um Livro Específico
+
+#### 3\. Procurar um Livro Específico
 
 Se você precisa dos detalhes de apenas um livro, use o ID dele na URL.
 
-  * **URL**: `http://localhost:3000/api/livros/1` (troque o `1` pelo ID que você quer buscar)
+  * **URL**: `http://localhost:3000/livros/1` (troque o `1` pelo ID que você quer buscar)
   * **Método**: `GET`
   * **Exemplo de Resposta (sucesso)**:
     ```json
@@ -186,11 +218,11 @@ Se você precisa dos detalhes de apenas um livro, use o ID dele na URL.
     }
     ```
 
-#### 3\. Atualizar o Status de um Livro
+#### 4\. Atualizar o Status de um Livro
 
 Esta rota é usada para mudar o status de um livro, por exemplo, de "disponível" para "emprestado".
 
-  * **URL**: `http://localhost:3000/api/livros/1/status` (troque o `1` pelo ID do livro que você quer atualizar)
+  * **URL**: `http://localhost:3000/livros/1/status` (troque o `1` pelo ID do livro que você quer atualizar)
   * **Método**: `PUT`
   * **Corpo da Requisição (JSON)**: Você precisa enviar um JSON com o novo status. **Atenção**: o `status` deve ser `"disponível"` ou `"emprestado"`.
     ```json
@@ -216,21 +248,46 @@ Esta rota é usada para mudar o status de um livro, por exemplo, de "disponível
     }
     ```
 
+#### 5\. Deletar um Livro do Banco
+
+Esta rota é usada para deletar um livro.
+
+  * **URL**: `http://localhost:3000/livros/5` (troque o `5` pelo ID do livro que você quer apagar)
+  * **Método**: `DELETE`
+  * **O que você faz**: Acessa a URL no seu navegador ou em uma ferramenta como o Postman.
+ 
+  * **Exemplo de Resposta (sucesso)**:
+    ```json
+    {
+      "mensagem": "Livro removido com sucesso!",
+      "livro": {
+        "id": 5,
+        "titulo": "Ensaio Sobre a Cegueira, José Saramago",
+        "status": "disponível"
+      }
+    }
+    ```
+  * **Exemplo de Resposta (erro - status inválido)**:
+    ```json
+    {
+      "erro": "Livro não encontrado."
+    }
+    ```
 
 
 ### Por Que Usamos Estas Rotas?
 
 O design da nossa API segue uma abordagem simples para gerenciar os livros. Cada rota tem um propósito claro e direto:
 
-* **`GET /api/livros`**: Esta rota serve para **ler (retornar)** todos os livros. É a porta de entrada para quem quer ver a lista completa do acervo. É a primeira coisa que um usuário ou sistema externo faria.
-* **`GET /api/livros/:id`**: Já esta rota foi criada para a necessidade de **ler (retornar)** os detalhes de um livro específico. Em vez de carregar a lista inteira, você pode buscar diretamente o livro de interesse usando o seu `ID`. Isso torna a busca mais eficiente.
-* **`PUT /api/livros/:id/status`**: Esta rota é usada para **atualizar** o status de um livro. Em vez de permitir que o usuário mude qualquer dado, a rota é específica para alterar o `status` (se está "disponível" ou "emprestado"). Isso simplifica a lógica e evita alterações indesejadas em outros campos, como o título ou ID.
+* **`GET /livros`**: Esta rota serve para **ler (retornar)** todos os livros. É a porta de entrada para quem quer ver a lista completa do acervo. É a primeira coisa que um usuário ou sistema externo faria.
+* **`GET /livros/:id`**: Já esta rota foi criada para a necessidade de **ler (retornar)** os detalhes de um livro específico. Em vez de carregar a lista inteira, você pode buscar diretamente o livro de interesse usando o seu `ID`. Isso torna a busca mais eficiente.
+* **`PUT /livros/:id/status`**: Esta rota é usada para **atualizar** o status de um livro. Em vez de permitir que o usuário mude qualquer dado, a rota é específica para alterar o `status` (se está "disponível" ou "emprestado"). Isso simplifica a lógica e evita alterações indesejadas em outros campos, como o título ou ID.
 
 -----
 
 ### 📝 Observações
 
-  * As rotas `/` e `/api/saudacao` são apenas para testes e servem para garantir que o servidor está funcionando.
+  * As rotas `/` e `/saudacao` são apenas para testes e servem para garantir que o servidor está funcionando.
   * Os dados dos livros não são salvos em um banco de dados. Se você desligar o servidor, a lista de livros será redefinida ao estado inicial quando você ligar de novo.
 
 -----
@@ -342,6 +399,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
