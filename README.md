@@ -308,6 +308,9 @@ Em um sistema mais complexo, esse recurso seria integrado a formulários de entr
 A rota que altera o status de cada livro (**emprestado/disponível**) é de grande utilidade para um sistema de controle de empréstimos.  
 Isso permite que os responsáveis pela biblioteca mantenham o controle do acervo em tempo real, evitando conflitos ou perda de informações importantes.  
 
+### ➕ Deletar livros ao acervo  
+A rota de exclusão é útil para retirar do sistema livros que já não fazem mais parte da coleção, seja por estarem danificados, perdidos ou terem sido doados.
+Em um cenário real, essa funcionalidade pode ser restrita apenas a administradores ou bibliotecários, garantindo que apenas pessoas autorizadas possam remover informações do acervo.
 
 
 <p align="center">
@@ -399,6 +402,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
