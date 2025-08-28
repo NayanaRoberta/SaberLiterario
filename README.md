@@ -292,6 +292,14 @@ O design da nossa API segue uma abordagem simples para gerenciar os livros. Cada
 
 -----
 
+## 📖 Documentação da API
+
+A documentação completa da API está disponível no Postman:  
+👉 [Acessar Documentação no Postman](https://documenter.getpostman.com/view/47728029/2sB3HeuPEx)
+
+-----
+
+
 ### 📚 Possíveis Usos da Nossa API  
 
 O **Saber Literário** foi pensado para simular de forma simples as rotinas de uma biblioteca.  
@@ -402,6 +410,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
