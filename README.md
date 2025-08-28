@@ -115,9 +115,206 @@ Para alcançar este objetivo, implementamos as seguintes diretrizes e funcionali
 * Melhorias Contínuas: Na Versão 2 do projeto, foram introduzidas melhorias significativas na interface para garantir ainda maior acessibilidade. Interface Web responsiva para tornar o sistema utilizável em diversos dispositivos, como celulares e tablets.
 * Qualidade de Código e Conteúdo: A Integração Contínua (CI) com validações de HTML e CSS, detecção de links quebrados e verificação de ortografia contribui para uma base de código e conteúdo mais robusta e livre de erros, o que indiretamente apoia a acessibilidade ao garantir que tecnologias assistivas possam interpretar o site corretamente.
 
+-----
+
+### 📖 Como usar nossa API de Livros
+
+Segue abaixo as instruções para rodar o servidor da API localmente e a usar as rotas disponíveis para gerenciar os livros.
+
+#### 🚀 Como Rodar a API Localmente
+
+Para começar, você precisa ter o **Node.js** instalado no seu computador. Se você já tem, é só seguir os passos abaixo:
+
+1.  **Salve o Código**: Salve o código da API em um arquivo com o nome `app.js`.
+2.  **Instale as Dependências**: Abra o terminal na mesma pasta onde você salvou o arquivo e digite o seguinte comando. Ele vai baixar tudo o que o Express.js precisa para funcionar.
+    ```bash
+    npm install express
+    ```
+3.  **Inicie o Servidor**: Agora é só rodar a API\! No terminal, digite:
+    ```bash
+    node app.js
+    ```
+    Se tudo der certo, você verá a mensagem `Servidor rodando em http://localhost:3000` no seu terminal. Isso significa que a API está no ar e pronta para ser usada.
+
+-----
+
+### 📚  Exemplos de das Uso Rotas da API
+
+A API de livros tem algumas rotas simples que você pode testá-las usando ferramentas como o **Postman**, o **Insomnia**, ou até mesmo o seu navegador.
+
+#### 1\. Adicionar um Livros
+
+Esta rota adiciona um novo licro a lista completa de livros que a API está gerenciando no momento.
+
+  * **URL**: `http://localhost:3000/livros`
+  * **Método**: `POST`
+  * **Corpo da Requisição (JSON)**: Você precisa enviar um JSON com o titulo e o status. **Atenção**: o `status` deve ser `"disponível"` ou `"emprestado"`.
+    ```json
+    {
+      "titulo": "As viagens de Gulliver",
+      "status": "disponível"
+    }
+    ```
+  * **Exemplo de Resposta (sucesso)**:
+    ```json
+    {
+        "mensagem": "Livro cadastrado com sucesso!",
+        "livro": {
+            "id": 4,
+            "titulo": "As viagens de Gulliver",
+            "status": "disponível"
+    }
+}
+    ```
+  * **Exemplo de Resposta (erro - status inválido)**:
+    ```json
+    {
+      "erro": "O campo \"titulo\" é obrigatório."
+    }
+    ```
+
+#### 2\. Ver Todos os Livros
+
+Esta rota retorna a lista completa de livros que a API está gerenciando no momento.
+
+  * **URL**: `http://localhost:3000/livros`
+  * **Método**: `GET`
+  * **O que você faz**: Acessa a URL no seu navegador ou em uma ferramenta como o Postman.
+  * **Exemplo de Resposta (sucesso)**:
+    ```json
+    [
+      {
+        "id": 1,
+        "titulo": "O Pequeno Príncipe",
+        "status": "disponível"
+      },
+      {
+        "id": 2,
+        "titulo": "Dom Casmurro",
+        "status": "disponível"
+      }
+    ]
+    ```
+
+
+#### 3\. Procurar um Livro Específico
+
+Se você precisa dos detalhes de apenas um livro, use o ID dele na URL.
+
+  * **URL**: `http://localhost:3000/livros/1` (troque o `1` pelo ID que você quer buscar)
+  * **Método**: `GET`
+  * **Exemplo de Resposta (sucesso)**:
+    ```json
+    {
+      "id": 1,
+      "titulo": "O Pequeno Príncipe",
+      "status": "disponível"
+    }
+    ```
+  * **Exemplo de Resposta (erro - livro não encontrado)**:
+    ```json
+    {
+      "erro": "Livro não encontrado."
+    }
+    ```
+
+#### 4\. Atualizar o Status de um Livro
+
+Esta rota é usada para mudar o status de um livro, por exemplo, de "disponível" para "emprestado".
+
+  * **URL**: `http://localhost:3000/livros/1/status` (troque o `1` pelo ID do livro que você quer atualizar)
+  * **Método**: `PUT`
+  * **Corpo da Requisição (JSON)**: Você precisa enviar um JSON com o novo status. **Atenção**: o `status` deve ser `"disponível"` ou `"emprestado"`.
+    ```json
+    {
+      "status": "emprestado"
+    }
+    ```
+  * **Exemplo de Resposta (sucesso)**:
+    ```json
+    {
+      "mensagem": "Status atualizado com sucesso!",
+      "livro": {
+        "id": 1,
+        "titulo": "O Pequeno Príncipe",
+        "status": "emprestado"
+      }
+    }
+    ```
+  * **Exemplo de Resposta (erro - status inválido)**:
+    ```json
+    {
+      "erro": "Status inválido. Use 'disponível' ou 'emprestado'."
+    }
+    ```
+
+#### 5\. Deletar um Livro do Banco
+
+Esta rota é usada para deletar um livro.
+
+  * **URL**: `http://localhost:3000/livros/5` (troque o `5` pelo ID do livro que você quer apagar)
+  * **Método**: `DELETE`
+  * **O que você faz**: Acessa a URL no seu navegador ou em uma ferramenta como o Postman.
+ 
+  * **Exemplo de Resposta (sucesso)**:
+    ```json
+    {
+      "mensagem": "Livro removido com sucesso!",
+      "livro": {
+        "id": 5,
+        "titulo": "Ensaio Sobre a Cegueira, José Saramago",
+        "status": "disponível"
+      }
+    }
+    ```
+  * **Exemplo de Resposta (erro - status inválido)**:
+    ```json
+    {
+      "erro": "Livro não encontrado."
+    }
+    ```
+
+
+### Por Que Usamos Estas Rotas?
+
+O design da nossa API segue uma abordagem simples para gerenciar os livros. Cada rota tem um propósito claro e direto:
+
+* **`GET /livros`**: Esta rota serve para **ler (retornar)** todos os livros. É a porta de entrada para quem quer ver a lista completa do acervo. É a primeira coisa que um usuário ou sistema externo faria.
+* **`GET /livros/:id`**: Já esta rota foi criada para a necessidade de **ler (retornar)** os detalhes de um livro específico. Em vez de carregar a lista inteira, você pode buscar diretamente o livro de interesse usando o seu `ID`. Isso torna a busca mais eficiente.
+* **`PUT /livros/:id/status`**: Esta rota é usada para **atualizar** o status de um livro. Em vez de permitir que o usuário mude qualquer dado, a rota é específica para alterar o `status` (se está "disponível" ou "emprestado"). Isso simplifica a lógica e evita alterações indesejadas em outros campos, como o título ou ID.
+
+-----
+
+### 📝 Observações
+
+  * As rotas `/` e `/saudacao` são apenas para testes e servem para garantir que o servidor está funcionando.
+  * Os dados dos livros não são salvos em um banco de dados. Se você desligar o servidor, a lista de livros será redefinida ao estado inicial quando você ligar de novo.
+
+-----
+
+### 📚 Possíveis Usos da Nossa API  
+
+O **Saber Literário** foi pensado para simular de forma simples as rotinas de uma biblioteca.  
+Mesmo sendo um projeto simples, nossas rotas podem ser usadas em cenários reais em outros sistemas de gerenciamento de bibliotecas comunitárias ou escolares que não exigem um alto nivel de complexidade.  
+
+### 🔍 Listar livros disponíveis  
+A rota que retorna a lista simulada de livros pode ser usada, em uma página de catálogo ou uma lista, permitindo que qualquer um que tenha acesso possa consultar rapidamente os títulos disponíveis antes de ir até o local da biblioteca.  
+
+### ➕ Adicionar novos livros ao acervo  
+A rota de cadastro de novos livros pode ser aplicada no dia a dia de um bibliotecário para registrar os novos livros que chegam ao acervo.  
+Em um sistema mais complexo, esse recurso seria integrado a formulários de entrada de dados e conectado a um banco de dados para controle permanente e garantir a integridade dos dados.  
+
+### 🔄 Atualizar o status de empréstimo  
+A rota que altera o status de cada livro (**emprestado/disponível**) é de grande utilidade para um sistema de controle de empréstimos.  
+Isso permite que os responsáveis pela biblioteca mantenham o controle do acervo em tempo real, evitando conflitos ou perda de informações importantes.  
+
+### ➕ Deletar livros ao acervo  
+A rota de exclusão é útil para retirar do sistema livros que já não fazem mais parte da coleção, seja por estarem danificados, perdidos ou terem sido doados.
+Em um cenário real, essa funcionalidade pode ser restrita apenas a administradores ou bibliotecários, garantindo que apenas pessoas autorizadas possam remover informações do acervo.
+
 
 <p align="center">
-    <img src="https://private-user-images.githubusercontent.com/165864220/415410888-e7380072-f9d6-4309-b752-e31ddf457e97.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODg4LWU3MzgwMDcyLWY5ZDYtNDMwOS1iNzUyLWUzMWRkZjQ1N2U5Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01YTE2YWJjMmY3MmYyMGJjZDdiMTFiZjIzYTMxYzVjZGYxZTc5NGNiMjE0MDIxNmUwMjY4ZjNhOWYzNzdkMTlmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.meXLTQMeVRJZzb72FPC7kG_6qTimojkSmTtmUdWHbhE" alt="Saber Literário Logo" width="1000px">
+    <img src="https://private-user-images.githubusercontent.com/165864220/415410888-e7380072-f9d6-4309-b752-e31ddf457e97.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU3MzE0MjAsIm5iZiI6MTc1NTczMTEyMCwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODg4LWU3MzgwMDcyLWY5ZDYtNDMwOS1iNzUyLWUzMWRkZjQ1N2U5Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgyMFQyMzA1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mNjFlN2IwZWVlNjQ1ODk4ZTAxNmYxMzFkNGMwNzEzNTNkMGIyOWQ1MDMzMzEzMWRkYjI0MTc2YmRlYmI2ZWJkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ydYYpURF3CooAGvl8H0hExOUgYm9yzF8BQkCpEwBA-4" alt="Saber Literário Logo" width="1000px">
 </p>
 
 <p align="center">
@@ -125,14 +322,14 @@ Para alcançar este objetivo, implementamos as seguintes diretrizes e funcionali
 </p>
 
 <p align="center">
-    <img src="https://private-user-images.githubusercontent.com/165864220/415410865-c1eae3d8-f9c3-42d3-bd29-a10844c0923c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODY1LWMxZWFlM2Q4LWY5YzMtNDJkMy1iZDI5LWExMDg0NGMwOTIzYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yMDU1MmNiM2M5ZWQ2OGYxMzk3N2JlYzRlNWUzZjlkZTEwZDhkNTg4YTUyZTU5YzYzNzEyMGQxNDI4NDI3MTRlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ofz6MOVBIY3wh18RA0-Z2jwlf1PNCk2d3imqwFSjf5g" alt="Saber Literário Logo" width="1000px">
+    <img src="https://private-user-images.githubusercontent.com/165864220/415410865-c1eae3d8-f9c3-42d3-bd29-a10844c0923c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU3MzE0MjAsIm5iZiI6MTc1NTczMTEyMCwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODY1LWMxZWFlM2Q4LWY5YzMtNDJkMy1iZDI5LWExMDg0NGMwOTIzYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgyMFQyMzA1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hM2FhNzAwNjQxNDU3OWViNGQwN2U4OWI3ODI1MDc0N2Y2OWY4MzI4ODc3OTE5NDA2NjcwM2FlM2Q3ZjU2ODM4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.rNuA1YQRlMH5OzzPfUkALwddjHjEPt8WwkdRgcbUzhc" alt="Saber Literário Logo" width="1000px">
 </p>
 
 <p align="center">
 
 </p>
 <p align="center">
-    <img src="https://private-user-images.githubusercontent.com/165864220/415410846-bef704c1-806f-4e73-bc8a-2d0fb0327214.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODQ2LWJlZjcwNGMxLTgwNmYtNGU3My1iYzhhLTJkMGZiMDMyNzIxNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NDQzZjQzYTFiODViNzdkYjNmZGI4MGI2NDk0MTU2ZDQ4NDRhYjNkZDc2MWQwYTVhY2Q5YWE3ZjkyNjk0MTkwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Da1PQgdPQYbp-iPpdGsMz69BhdleGoc0tqNPSJbSnrg" alt="Saber Literário Logo" width="1000px">
+    <img src="https://private-user-images.githubusercontent.com/165864220/415410846-bef704c1-806f-4e73-bc8a-2d0fb0327214.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU3MzE0MjAsIm5iZiI6MTc1NTczMTEyMCwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODQ2LWJlZjcwNGMxLTgwNmYtNGU3My1iYzhhLTJkMGZiMDMyNzIxNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgyMFQyMzA1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04Zjc3ZGVjMTgxOTk0MmEzYjc5OWE1ZTA0MWVkZmUxOTAwMDk0OWJkMDAxNmJhOTVjMDkzZjJhZmMzNDY4MTNiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.pRgZIfnivt_yPMHt4v8pP0EjmPF9JgcELAoNXPctDJE" alt="Saber Literário Logo" width="1000px">
 </p>
 
 <p align="center">
@@ -140,7 +337,7 @@ Para alcançar este objetivo, implementamos as seguintes diretrizes e funcionali
 </p>
 
 <p align="center">
-    <img src="https://private-user-images.githubusercontent.com/165864220/415410829-356de5cc-ccd0-4ebe-8bfd-480e8a65eb4c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI5NzcwMzUsIm5iZiI6MTc1Mjk3NjczNSwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODI5LTM1NmRlNWNjLWNjZDAtNGViZS04YmZkLTQ4MGU4YTY1ZWI0Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyMFQwMTU4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03OTYyZjMzZDY5MWQ4YmQ1ZjM4MjcyYzZiNjgwMjVjZTBhNzc4MGFlODY3NTRhMzdjY2YyMmMyOWUzNGFkNDBkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.LxreZphuIX6bLj43j-CAqqg0OG2tAoNUT96jh_HCobM" alt="Saber Literário Logo" width="1000px">
+    <img src="https://private-user-images.githubusercontent.com/165864220/415410829-356de5cc-ccd0-4ebe-8bfd-480e8a65eb4c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU3MzE0MjAsIm5iZiI6MTc1NTczMTEyMCwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODI5LTM1NmRlNWNjLWNjZDAtNGViZS04YmZkLTQ4MGU4YTY1ZWI0Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgyMFQyMzA1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MjMyNDdiOWQ4MTYxOTQ3YThkZTYwODdiNGIzZDU2YmU4MGU5YTJlMzUzNmNkNWQ1NzkwN2E5N2Y2ZmQwNWM3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Pe2KldGjbrfq7ARc_JvwZbq7ydfe1AXKWdz2TB5iqHU" alt="Saber Literário Logo" width="1000px">
 </p>
 
 
@@ -205,6 +402,15 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
+
+
+
+
+
+
+
+
 
 
 
