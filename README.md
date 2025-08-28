@@ -144,7 +144,7 @@ A API de livros tem algumas rotas simples que você pode testá-las usando ferra
 
 #### 1\. Adicionar um Livros
 
-Esta rota adiciona um novo licro a lista completa de livros que a API está gerenciando no momento.
+Esta rota adiciona um novo livro a lista completa de livros que a API está gerenciando no momento.
 
   * **URL**: `http://localhost:3000/livros`
   * **Método**: `POST`
@@ -402,6 +402,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
