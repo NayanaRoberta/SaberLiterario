@@ -321,6 +321,18 @@ A rota de exclusão é útil para retirar do sistema livros que já não fazem m
 Em um cenário real, essa funcionalidade pode ser restrita apenas a administradores ou bibliotecários, garantindo que apenas pessoas autorizadas possam remover informações do acervo.
 
 
+## 🌍 Impacto dos Testes na Sociedade  
+
+Nos últimos anos, a tecnologia passou a ocupar um espaço central no dia a dia do brasileiro. Aplicativos como o **Caixa Tem**, que foi usado para o pagamento do auxílio emergencial e ainda hoje se utiliza para o **Bolsa Família**, o **PIX**, que virou parte da rotina de milhões de pessoas, além dos apps de **delivery**, **bancos digitais** e **EAD**, mostram como nossa vida depende de sistemas funcionando bem.  
+
+Quando esses sistemas apresentam falhas, o impacto é imediato e muitas vezes doloroso: pessoas ficam horas tentando acessar o aplicativo para receber um benefício, pagamentos deixam de ser processados, compras são travadas, consultas médicas online caem. Tudo isso gera **frustração, perda de tempo e até prejuízos financeiros**.  
+
+É nesse contexto que os **testes de software** se tornam fundamentais. Eles ajudam a evitar falhas, garantir que os sistemas funcionem como esperado e dar mais confiança para quem depende desses serviços. Um erro que pode parecer pequeno para o desenvolvedor pode significar um grande problema para milhões de usuários.  
+
+Implementar testes não é só uma prática técnica, mas um ato de **responsabilidade social**. Testar é cuidar para que a tecnologia realmente sirva às pessoas, trazendo mais **segurança, eficiência e confiança** em serviços que hoje são essenciais para a vida da população.  
+
+
+
 <p align="center">
     <img src="https://private-user-images.githubusercontent.com/165864220/415410888-e7380072-f9d6-4309-b752-e31ddf457e97.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU3MzE0MjAsIm5iZiI6MTc1NTczMTEyMCwicGF0aCI6Ii8xNjU4NjQyMjAvNDE1NDEwODg4LWU3MzgwMDcyLWY5ZDYtNDMwOS1iNzUyLWUzMWRkZjQ1N2U5Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgyMFQyMzA1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mNjFlN2IwZWVlNjQ1ODk4ZTAxNmYxMzFkNGMwNzEzNTNkMGIyOWQ1MDMzMzEzMWRkYjI0MTc2YmRlYmI2ZWJkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ydYYpURF3CooAGvl8H0hExOUgYm9yzF8BQkCpEwBA-4" alt="Saber Literário Logo" width="1000px">
 </p>
@@ -410,6 +422,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
