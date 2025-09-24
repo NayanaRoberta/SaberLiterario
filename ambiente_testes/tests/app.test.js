@@ -1,69 +1,82 @@
 const request = require('supertest');
 const app = require('../app');
 
+let idDoNovoLivro;
+
 describe('Testes das rotas da API de livros', () => {
 
-  // -----------------------GET-----------------------
+    // -----------------------GET-----------------------
+    it('Deve responder na rota raiz /', async () => {
+        const res = await request(app).get('/');
+        expect(res.statusCode).toBe(200);
+        expect(res.text).toContain('Servidor está rodando');
+    });
 
-  it('Deve responder na rota raiz /', async () => {
-    const res = await request(app).get('/');
-    expect(res.statusCode).toBe(200);
-    expect(res.text).toContain('Servidor está rodando');
-  });
-  
-  // --------------------GET/livros--------------------
+    // --------------------GET/livros--------------------
+    it('Deve listar todos os livros em /livros', async () => {
+        const res = await request(app).get('/livros');
+        expect(res.statusCode).toBe(200);
+        expect(Array.isArray(res.body)).toBe(true);
+        expect(res.body.length).toBeGreaterThan(0);
+    });
 
-  it('Deve listar todos os livros em /livros', async () => {
-    const res = await request(app).get('/livros');
-    expect(res.statusCode).toBe(200);
-    expect(Array.isArray(res.body)).toBe(true);
-    expect(res.body.length).toBeGreaterThan(0);
-  });
+    // ----------------------POST----------------------
+    it('Deve cadastrar um novo livro com POST /livros', async () => {
+        const novo = { titulo: 'Livro Teste' };
+        const res = await request(app).post('/livros').send(novo);
+        expect(res.statusCode).toBe(201);
+        expect(res.body.livro).toHaveProperty('id');
+        expect(res.body.livro.titulo).toBe('Livro Teste');
 
-  // ----------------------POST----------------------
+        // Armazena o ID do livro criado para ser usado nos próximos testes
+        idDoNovoLivro = res.body.livro.id;
+    });
 
-  it('Deve cadastrar um novo livro com POST /livros', async () => {
-  const novo = { titulo: 'Livro Teste' };
-  const res = await request(app).post('/livros').send(novo);
-  expect(res.statusCode).toBe(201);
-  expect(res.body.livro).toHaveProperty('id');
-  expect(res.body.livro.titulo).toBe('Livro Teste');
+    // Teste para criar livro inválido
+    it('Não deve cadastrar um livro sem o título e deve retornar 400', async () => {
+        const livroInvalido = {};
+        const res = await request(app).post('/livros').send(livroInvalido);
+        expect(res.statusCode).toBe(400);
+        expect(res.body).toHaveProperty('erro');
+        expect(res.body.erro).toBe('O campo "titulo" é obrigatório.');
+    });
 
-  idCriado = res.body.livro.id; // 👈 armazena para PUT e DELETE
-});
+    // ------------------------PUT-----------------------
+    it('Deve atualizar um livro existente com PUT /livros/:id', async () => {
+        // Usa o ID armazenado do teste anterior
+        const res = await request(app)
+            .put(`/livros/${idDoNovoLivro}`)
+            .send({ titulo: 'Livro Atualizado' });
 
-  // ------------------------PUT-----------------------
+        expect(res.statusCode).toBe(200);
+        expect(res.body.livro.titulo).toBe('Livro Atualizado');
+    });
 
-  it('Deve atualizar um livro existente com PUT /livros/:id', async () => {
-  const res = await request(app)
-    .put(`/livros/${idCriado}`)
-    .send({ titulo: 'Livro Atualizado' });
+    it('Não deve atualizar livro inexistente', async () => {
+        const res = await request(app)
+            .put('/livros/9999')
+            .send({ titulo: 'Nada' });
 
-  expect(res.statusCode).toBe(200);
-  expect(res.body.livro.titulo).toBe('Livro Atualizado');
-});
+        expect(res.statusCode).toBe(404);
+        expect(res.body).toHaveProperty('erro');
+    });
 
-  it('Não deve atualizar livro inexistente', async () => {
-    const res = await request(app)
-      .put('/livros/9999')
-      .send({ titulo: 'Nada' });
+    // ----------------------DELETE----------------------
+    it('Deve deletar um livro existente com DELETE /livros/:id', async () => {
+        // Usa o ID armazenado do teste de criação
+        const res = await request(app).delete(`/livros/${idDoNovoLivro}`);
+        expect(res.statusCode).toBe(200);
+        expect(res.body.mensagem).toContain('deletado');
 
-    expect(res.statusCode).toBe(404);
-    expect(res.body).toHaveProperty('erro');
-  });
+        // Opcional: Verifica se o livro foi realmente excluído.
+        const resGet = await request(app).get(`/livros/${idDoNovoLivro}`);
+        expect(resGet.statusCode).toBe(404);
+    });
 
-  // ----------------------DELETE----------------------
-
-  it('Deve deletar um livro existente com DELETE /livros/:id', async () => {
-    const res = await request(app).delete(`/livros/${idCriado}`);
-    expect(res.statusCode).toBe(200);
-    expect(res.body.mensagem).toContain('deletado');
-  });
-
-  it('Não deve deletar livro inexistente', async () => {
-    const res = await request(app).delete('/livros/9999');
-    expect(res.statusCode).toBe(404);
-    expect(res.body).toHaveProperty('erro');
-  });
+    it('Não deve deletar livro inexistente', async () => {
+        const res = await request(app).delete('/livros/9999');
+        expect(res.statusCode).toBe(404);
+        expect(res.body).toHaveProperty('erro');
+    });
 });
 
