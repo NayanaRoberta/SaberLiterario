@@ -298,6 +298,88 @@ Este documento detalha como executar os testes de funcionalidade da API de Livro
 
 ---
 
+## 1. Testes Automatizados
+
+Os testes automatizados são a forma preferencial de validar as rotas da API. Eles foram implementados com **Jest** para o framework de teste e **Supertest** para simular as requisições HTTP.
+
+### Pré-requisitos
+
+Antes de executar os testes, assegure-se de que todas as dependências do projeto estão instaladas. Se for a primeira vez que você roda o projeto, execute o seguinte comando no diretório raiz (`/ambiente_testes`):
+
+```bash
+npm install
+```
+
+Execução
+Para rodar a suíte de testes completa, execute o seguinte comando no terminal, a partir do diretório raiz do projeto:
+
+```Bash
+npm test
+```
+
+A saída exibirá o resultado da execução de cada teste, indicando se foi aprovado ```(PASS)``` ou reprovado ```(FAIL)```, juntamente com o tempo de execução.
+
+## 2. Testes Manuais (Postman)
+Os testes manuais são úteis para depurar comportamentos específicos da API ou para explorar os endpoints interativamente.
+
+Pré-requisitos
+Postman deve estar instalado em seu sistema.
+
+O servidor da API deve estar em execução. Inicie-o com o seguinte comando no diretório raiz do projeto:
+
+```Bash
+npm start
+```
+
+Procedimento de Teste
+Para cada teste, crie uma nova requisição no Postman e configure-a conforme as especificações a seguir. A URL base para todas as requisições é http://localhost:3000.
+
+**Cenário 1:** Cadastro de Livro Válido
+
+Endpoint: ```POST /livros```
+
+Corpo da Requisição (Body):
+
+Formato: ```raw (JSON)```
+
+Dados de exemplo:
+
+```JSON
+{
+    "titulo": "O Poder do Hábito",
+    "autor": "Charles Duhigg"
+}
+```
+
+Verificação:
+
+```Status da resposta: 201 Created```
+
+Corpo da resposta: O objeto do livro recém-criado, incluindo um ID.
+
+**Cenário 2:** Cadastro de Livro Inválido
+Endpoint: ```POST /livros```
+
+Corpo da Requisição (Body):
+
+Formato: ```raw (JSON)```
+
+Dados de exemplo (campo obrigatório titulo ausente):
+
+```JSON
+{
+    "autor": "Qualquer Autor"
+}
+```
+
+Verificação:
+
+Status da resposta: ```400 Bad Request```
+
+Corpo da resposta: Um objeto ```JSON``` contendo a propriedade erro e a mensagem de validação correspondente.
+
+---
+
 ## 📖 Documentação da API
 
 A documentação completa da API está disponível no Postman:  
@@ -428,6 +510,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
