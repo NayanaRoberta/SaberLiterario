@@ -320,65 +320,260 @@ npm test
 A saída exibirá o resultado da execução de cada teste, indicando se foi aprovado ```(PASS)``` ou reprovado ```(FAIL)```, juntamente com o tempo de execução.
 
 ## 2. Testes Manuais (Postman)
-Os testes manuais são úteis para depurar comportamentos específicos da API ou para explorar os endpoints interativamente.
+Boa! Entendi o que aconteceu 👇
 
-Pré-requisitos
-Postman deve estar instalado em seu sistema.
+Quando você copia do bloco de código (aquele dentro de `markdown ... `), o GitHub interpreta tudo como **texto puro**, não aplica a formatação Markdown.
 
-O servidor da API deve estar em execução. Inicie-o com o seguinte comando no diretório raiz do projeto:
+🔑 **Solução:** você precisa colar direto no `README.md` **sem as linhas de abertura e fechamento do bloco de código**.
 
-```Bash
+Ou seja: eu vou te passar **o documento inteiro já pronto em Markdown**, mas sem aquelas “cercas” de código (```), assim você copia/cola e o GitHub renderiza corretamente.
+
+Aqui está o texto **formatado de verdade**:
+
+---
+
+# Testes da API de Livros
+
+Este documento detalha como executar os testes de funcionalidade da **API de Livros**.
+A suíte de testes inclui tanto **testes automatizados**, para uma validação rápida e contínua, quanto **testes manuais**, para verificação em tempo real via Postman.
+
+---
+
+## 1. Testes Automatizados
+
+**Descrição:** Os testes automatizados foram desenvolvidos utilizando frameworks de teste integrados ao projeto. Eles permitem garantir a qualidade contínua da aplicação e devem ser executados sempre que houver alterações no código.
+
+**Comando para execução:**
+
+```bash
+npm test
+```
+
+**Observação:** O relatório exibirá os resultados de cada caso de teste, incluindo erros e falhas, se existirem.
+
+---
+
+## 2. Testes Manuais (Postman)
+
+**Descrição:** Os testes manuais são úteis para depurar comportamentos específicos da API ou para explorar os endpoints interativamente.
+
+### 2.1 **Pré-requisitos**
+
+* **Postman:** O **Postman** deve estar instalado em seu sistema.
+* **Servidor:** O servidor da API deve estar em execução.
+
+**Como iniciar o servidor (diretório raiz do projeto):**
+
+```bash
 npm start
 ```
 
-Procedimento de Teste
-Para cada teste, crie uma nova requisição no Postman e configure-a conforme as especificações a seguir. A URL base para todas as requisições é http://localhost:3000.
+### 2.2 **Procedimento de Teste (base)**
 
-**Cenário 1:** Cadastro de Livro Válido
-
-Endpoint: ```POST /livros```
-
-Corpo da Requisição (Body):
-
-Formato: ```raw (JSON)```
-
-Dados de exemplo:
-
-```JSON
-{
-    "titulo": "O Poder do Hábito",
-    "autor": "Charles Duhigg"
-}
-```
-
-Verificação:
-
-```Status da resposta: 201 Created```
-
-Corpo da resposta: O objeto do livro recém-criado, incluindo um ID.
-
-**Cenário 2:** Cadastro de Livro Inválido
-Endpoint: ```POST /livros```
-
-Corpo da Requisição (Body):
-
-Formato: ```raw (JSON)```
-
-Dados de exemplo (campo obrigatório titulo ausente):
-
-```JSON
-{
-    "autor": "Qualquer Autor"
-}
-```
-
-Verificação:
-
-Status da resposta: ```400 Bad Request```
-
-Corpo da resposta: Um objeto ```JSON``` contendo a propriedade erro e a mensagem de validação correspondente.
+* **URL base:** `http://localhost:3000`
+* **Observação:** Para cada teste, crie uma nova requisição no Postman e configure-a conforme as especificações abaixo (método, rota, body quando aplicável, headers se necessário, etc).
 
 ---
+
+## 3. Cenários de Teste
+
+### **Cenário 1 – Cadastro de Livro Válido**
+
+* **Endpoint:** `POST /livros`
+* **Formato do Body:** `raw (JSON)`
+
+```json
+{
+  "titulo": "O Poder do Hábito",
+  "autor": "Charles Duhigg"
+}
+```
+
+* **Verificação:**
+
+  * **Status da resposta:** `201 Created`
+  * **Corpo da resposta:** Objeto do livro recém-criado, incluindo um **id**.
+
+---
+
+### **Cenário 2 – Cadastro de Livro Inválido**
+
+* **Endpoint:** `POST /livros`
+* **Formato do Body:** `raw (JSON)`
+
+```json
+{
+  "autor": "Qualquer Autor"
+}
+```
+
+* **Verificação:**
+
+  * **Status da resposta:** `400 Bad Request`
+  * **Corpo da resposta:** Objeto JSON contendo a propriedade **erro** e a mensagem de validação correspondente.
+
+---
+
+## 4. Casos de Teste Detalhados
+
+A seguir estão os testes manuais definidos para garantir que os critérios de **clareza**, **completude** e **relevância** sejam atendidos.
+
+---
+
+### **T01 – Cadastrar Livro Válido**
+
+* **ID:** **T01**
+
+* **Rota (API):** **`POST /livros`**
+
+* **Objetivo:** **Verificar se é possível cadastrar um livro válido.**
+
+* **Passos (Postman):**
+
+  1. **Método:** **POST**
+
+  2. **URL:** `http://localhost:3000/livros`
+
+  3. **Body:** `raw` → `JSON`
+
+  4. **Conteúdo do Body:**
+
+     ```json
+     {
+       "titulo": "Manual do saber literário",
+       "status": "emprestado"
+     }
+     ```
+
+  5. **Ação:** Clicar em **Send**.
+
+* **Resultado Esperado:**
+
+  * **Status:** `201 Created`
+  * **Mensagem:** `"Livro cadastrado com sucesso!"`
+  * **Resposta:** JSON contendo `id`, `titulo` e `status`.
+
+---
+
+### **T02 – Cadastro sem Título**
+
+* **ID:** **T02**
+
+* **Rota (API):** **`POST /livros`**
+
+* **Objetivo:** **Confirmar que não cadastra livro sem título.**
+
+* **Passos (Postman):**
+
+  1. **Método:** **POST**
+
+  2. **URL:** `http://localhost:3000/livros`
+
+  3. **Body:** `raw` → `JSON`
+
+  4. **Conteúdo do Body:**
+
+     ```json
+     {
+       "status": "emprestado"
+     }
+     ```
+
+  5. **Ação:** Clicar em **Send**.
+
+* **Resultado Esperado:**
+
+  * **Status:** `400 Bad Request`
+  * **Mensagem:** `"O campo \"titulo\" é obrigatório."`
+
+---
+
+### **T03 – Listar Todos os Livros**
+
+* **ID:** **T03**
+
+* **Rota (API):** **`GET /livros`**
+
+* **Objetivo:** **Conferir se retorna lista de todos os livros.**
+
+* **Passos (Postman):**
+
+  1. **Método:** **GET**
+  2. **URL:** `http://localhost:3000/livros`
+  3. **Ação:** Clicar em **Send**.
+
+* **Resultado Esperado:**
+
+  * **Status:** `200 OK`
+  * **Resposta:** Array (`[]`) de livros; cada item deve conter `id`, `titulo` e `status`.
+
+---
+
+### **T04 – Atualizar Status de Livro**
+
+* **ID:** **T04**
+
+* **Rota (API):** **`PUT /livros/:id/status`**
+
+* **Objetivo:** **Verificar se é possível atualizar o status de um livro existente.**
+
+* **Passos (Postman):**
+
+  1. **Método:** **PUT**
+
+  2. **URL:** `http://localhost:3000/livros/1/status` (substituir `1` por um `id` válido)
+
+  3. **Body:** `raw` → `JSON`
+
+  4. **Conteúdo do Body:**
+
+     ```json
+     {
+       "status": "disponível"
+     }
+     ```
+
+  5. **Ação:** Clicar em **Send**.
+
+* **Resultado Esperado:**
+
+  * **Status:** `200 OK`
+  * **Mensagem:** `"Livro atualizado com sucesso!"`
+  * **Resposta:** Objeto do livro com `status: "disponível"`.
+
+---
+
+### **T05 – Remover Livro**
+
+* **ID:** **T05**
+
+* **Rota (API):** **`DELETE /livros/:id`**
+
+* **Objetivo:** **Verificar se um livro pode ser removido.**
+
+* **Passos (Postman):**
+
+  1. **Método:** **DELETE**
+  2. **URL:** `http://localhost:3000/livros/1` (substituir `1` por um `id` válido)
+  3. **Ação:** Clicar em **Send**.
+  4. **Verificação adicional:** Executar `GET /livros/1` para confirmar a exclusão.
+
+* **Resultado Esperado:**
+
+  * **Status (DELETE):** `200 OK`
+  * **Mensagem:** `"Livro removido com sucesso!"`
+  * **Status (GET após exclusão):** `404 Not Found` (confirmando remoção)
+
+---
+
+## 5. Observações Finais
+
+* **Execução contínua:** Os **testes automatizados** devem ser executados a cada modificação no código.
+* **Homologação:** Os **testes manuais** são recomendados em fases de homologação ou quando for necessário depurar comportamentos específicos.
+* **Rastreabilidade:** Registre os resultados (data, tester, status, evidências) para controle de qualidade e rastreabilidade.
+
+---
+
 
 ## 📖 Documentação da API
 
@@ -510,6 +705,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
