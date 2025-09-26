@@ -373,48 +373,10 @@ npm start
 * **URL base:** `http://localhost:3000`
 * **Observação:** Para cada teste, crie uma nova requisição no Postman e configure-a conforme as especificações abaixo (método, rota, body quando aplicável, headers se necessário, etc).
 
----
-
-## 3. Cenários de Teste
-
-### **Cenário 1 – Cadastro de Livro Válido**
-
-* **Endpoint:** `POST /livros`
-* **Formato do Body:** `raw (JSON)`
-
-```json
-{
-  "titulo": "O Poder do Hábito",
-  "autor": "Charles Duhigg"
-}
-```
-
-* **Verificação:**
-
-  * **Status da resposta:** `201 Created`
-  * **Corpo da resposta:** Objeto do livro recém-criado, incluindo um **id**.
 
 ---
 
-### **Cenário 2 – Cadastro de Livro Inválido**
-
-* **Endpoint:** `POST /livros`
-* **Formato do Body:** `raw (JSON)`
-
-```json
-{
-  "autor": "Qualquer Autor"
-}
-```
-
-* **Verificação:**
-
-  * **Status da resposta:** `400 Bad Request`
-  * **Corpo da resposta:** Objeto JSON contendo a propriedade **erro** e a mensagem de validação correspondente.
-
----
-
-## 4. Casos de Teste Detalhados
+## 3. Casos de Teste Detalhados
 
 A seguir estão os testes manuais definidos para garantir que os critérios de **clareza**, **completude** e **relevância** sejam atendidos.
 
@@ -566,14 +528,6 @@ A seguir estão os testes manuais definidos para garantir que os critérios de *
 
 ---
 
-## 5. Observações Finais
-
-* **Execução contínua:** Os **testes automatizados** devem ser executados a cada modificação no código.
-* **Homologação:** Os **testes manuais** são recomendados em fases de homologação ou quando for necessário depurar comportamentos específicos.
-* **Rastreabilidade:** Registre os resultados (data, tester, status, evidências) para controle de qualidade e rastreabilidade.
-
----
-
 
 ## 📖 Documentação da API
 
@@ -705,6 +659,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
