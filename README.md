@@ -320,40 +320,6 @@ npm test
 A saída exibirá o resultado da execução de cada teste, indicando se foi aprovado ```(PASS)``` ou reprovado ```(FAIL)```, juntamente com o tempo de execução.
 
 ## 2. Testes Manuais (Postman)
-Boa! Entendi o que aconteceu 👇
-
-Quando você copia do bloco de código (aquele dentro de `markdown ... `), o GitHub interpreta tudo como **texto puro**, não aplica a formatação Markdown.
-
-🔑 **Solução:** você precisa colar direto no `README.md` **sem as linhas de abertura e fechamento do bloco de código**.
-
-Ou seja: eu vou te passar **o documento inteiro já pronto em Markdown**, mas sem aquelas “cercas” de código (```), assim você copia/cola e o GitHub renderiza corretamente.
-
-Aqui está o texto **formatado de verdade**:
-
----
-
-# Testes da API de Livros
-
-Este documento detalha como executar os testes de funcionalidade da **API de Livros**.
-A suíte de testes inclui tanto **testes automatizados**, para uma validação rápida e contínua, quanto **testes manuais**, para verificação em tempo real via Postman.
-
----
-
-## 1. Testes Automatizados
-
-**Descrição:** Os testes automatizados foram desenvolvidos utilizando frameworks de teste integrados ao projeto. Eles permitem garantir a qualidade contínua da aplicação e devem ser executados sempre que houver alterações no código.
-
-**Comando para execução:**
-
-```bash
-npm test
-```
-
-**Observação:** O relatório exibirá os resultados de cada caso de teste, incluindo erros e falhas, se existirem.
-
----
-
-## 2. Testes Manuais (Postman)
 
 **Descrição:** Os testes manuais são úteis para depurar comportamentos específicos da API ou para explorar os endpoints interativamente.
 
@@ -659,6 +625,7 @@ Versão 2 - [Melhorias e Ajustes](https://github.com/jorgejuliao/Saber-Literario
 <h2 id="license">License 📃 </h2>
 
 This project is under [MIT](./LICENSE) license
+
 
 
 
